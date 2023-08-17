@@ -1,4 +1,9 @@
-h1{
-    color:green;
+.title{
+    color: black;
     font-size: 30px;
+}
+
+.subtitle{
+    color: black
+    font-size: 25px;
 }
