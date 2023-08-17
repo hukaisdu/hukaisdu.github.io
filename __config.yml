@@ -1,3 +1,19 @@
-theme: jekyll-theme-minimal
-title: Differential/Linear Security and Implementation Costs of Some AES-Like Ciphers
-description: Providing the data to support our paper:
+show_downloads: false
+
+exclude:
+  - node_modules
+  - script
+
+theme: jekyll-theme-midnight
+
+github:
+  is_project_page: false
+  private: false
+  license:
+    name: MIT
+  source:
+    branch: "main"
+    path: "/"
+
+name: null
+title: The AES-Like Ciphers' Data
