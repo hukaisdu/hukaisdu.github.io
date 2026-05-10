@@ -1,255 +1,328 @@
 ---
-title: ""
+title: "Publications"
 permalink: /publications/
 author_profile: true
+lang: en
+alt_url: /zh/publications/
 ---
 
 <style type="text/css" rel="stylesheet">
 .btn--paper {
-color: white;
-background-color: lightseagreen;
-padding: 1px 3px;
-text-align: center;
-border-radius: 4px;
-a { TEXT-DECORATION:none }
+  color: white;
+  background-color: #4a7a8c;
+  padding: 1px 6px;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 0.85em;
+  text-decoration: none;
 }
-.btn--arxiv {
-color: white;
-background-color: tan;
-padding: 1px 3px;
-text-align: center;
-border-radius: 4px;
-a { TEXT-DECORATION:none }
+.btn--eprint {
+  color: white;
+  background-color: #a08060;
+  padding: 1px 6px;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 0.85em;
+  text-decoration: none;
 }
 .btn--code {
-color: white;
-background-color: DARKORANGE;
-padding: 1px 3px;
-text-align: center;
-border-radius: 4px;
-a { TEXT-DECORATION:none }
+  color: white;
+  background-color: #6b8e6b;
+  padding: 1px 6px;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 0.85em;
+  text-decoration: none;
+}
+.btn--award {
+  color: white;
+  background-color: #b07060;
+  padding: 1px 6px;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 0.85em;
+  text-decoration: none;
+}
+.pub-title {
+  color: #2a5a7a;
+  font-weight: 600;
+}
+.corresp {
+  color: #c84030;
+  font-size: 0.95em;
+  font-weight: 700;
 }
 </style>
-- $^*$: Equal contribution; $^\dagger$: Corresponding author
-  
-<h2 id='2025'>2025</h2>
 
-### <span style="color:rgb(39, 117, 182)">Fuzz-Testing Meets LLM-Based Agents: An Automated and Efficient Framework for Jailbreaking Text-To-Image Generation Models</span>
-<font size="3"> Yingkai Dong, Xiangtao Meng, Ning Yu, <b>Zheng Li$^\dagger$</b>, Shanqing Guo;
-<i>IEEE S&P 2025</i></font>
-<a href="" class="btn--paper" target="_blank">pdf</a>
-<a href="" class="btn--arxiv" target="_blank">arxiv</a>
-<a href="" class="btn--code" target="_blank">code</a>
+A full list is also available on [DBLP](https://dblp.org/pid/180/3506.html) and [Google Scholar](https://scholar.google.com/citations?user=NzLi9xMAAAAJ).
 
-### <span style="color:rgb(39, 117, 182)">Enhanced Label-Only Membership Inference Attacks with Fewer Queries</span>
-<font size="3"> Hao Li$^*$, <b>Zheng Li$^*$</b>, Siyuan Wu, Yutong Ye, Min Zhang, Dengguo Feng, Yang Zhang;
-<i>USENIX Security 2025</i></font>
-<a href="" class="btn--paper" target="_blank">pdf</a>
-<a href="" class="btn--arxiv" target="_blank">arxiv</a>
-<a href="" class="btn--code" target="_blank">code</a>
+<small>✉ Corresponding author.</small>
 
-### <span style="color:rgb(39, 117, 182)">Membership Inference Attacks Against Vision-Language Models</span>
-<font size="3"> Yuke Hu, <b>Zheng Li</b>, Zhihao Liu, Yang Zhang, Zhan Qin, Kui Ren, Chun Chen;
-<i>USENIX Security 2025</i></font>
-<a href="" class="btn--paper" target="_blank">pdf</a>
-<a href="" class="btn--arxiv" target="_blank">arxiv</a>
-<a href="" class="btn--code" target="_blank">code</a>
+<h2 id="preprints">Preprints</h2>
 
-### <span style="color:rgb(39, 117, 182)">A Comprehensive Study of Privacy Risks in Curriculum Learning</span>
-<font size="3"> Joann Qiongna Chen, Xinlei He, <b>Zheng Li</b>, Yang Zhang, Zhou Li;
-<i>PETS 2025</i></font>
-<a href="https://zhenglisec.github.io/files/PETS25_CL.pdf" class="btn--paper" target="_blank">pdf</a>
-<a href="https://arxiv.org/abs/2310.10124" class="btn--arxiv" target="_blank">arxiv</a>
-<a href="https://zhenglisec.github.io/" class="btn--code" target="_blank">code</a>
+### <span class="pub-title">Cryptanalytic Extraction of Recurrent Neural Network Models</span>
+<font size="3">Longxiang Wei, Hao Lei, Xiaokang Qi, Xiaohan Sun, Lei Gao, <b>Kai Hu</b>, Wei Wang, Meiqin Wang.<br>
+<i>Cryptology ePrint Archive 2026/168.</i></font>
+<a href="https://eprint.iacr.org/2026/168.pdf" class="btn--paper" target="_blank">pdf</a>
+<a href="https://eprint.iacr.org/2026/168" class="btn--eprint" target="_blank">eprint</a>
 
-<h2 id='2024'>2024</h2>
+### <span class="pub-title">Exploring Core Monomial Prediction Further: Weak-Key Superpoly Recovery for 852-Round Trivium</span>
+<font size="3">Jiahui He, <b>Kai Hu</b><sup class="corresp">✉</sup>, Guowei Liu.<br>
+<i>Cryptology ePrint Archive 2025/1330.</i></font>
+<a href="https://eprint.iacr.org/2025/1330.pdf" class="btn--paper" target="_blank">pdf</a>
+<a href="https://eprint.iacr.org/2025/1330" class="btn--eprint" target="_blank">eprint</a>
 
-### <span style="color:rgb(39, 117, 182)">ModScan: Measuring Stereotypical Bias in Large Vision-Language Models from Vision and Language Modalities</span>
-<font size="3"> Yukun Jiang, <b>Zheng Li$^\dagger$</b>, Xinyue Shen, Yugeng Liu, Michael Backes, Yang Zhang;
-<i>EMNLP 2024</i></font>
-<a href="https://zhenglisec.github.io/files/EMNLP24_VLMbias.pdf" class="btn--paper" target="_blank">pdf</a>
-<a href="https://arxiv.org/abs/2410.06967" class="btn--arxiv" target="_blank">arxiv</a>
-<a href="https://zhenglisec.github.io/" class="btn--code" target="_blank">code</a>
+<h2 id="2026">2026</h2>
 
-### <span style="color:rgb(39, 117, 182)">Membership Inference Attacks Against In-Context Learning</span>
-<font size="3"> Rui Wen, <b>Zheng Li$^\dagger$</b>, Michael Backes, Yang Zhang;
-<i>CCS 2024</i></font>
-<a href="https://zhenglisec.github.io/files/CCS24_ICLMIA.pdf" class="btn--paper" target="_blank">pdf</a>
-<a href="https://arxiv.org/abs/2409.01380v1" class="btn--arxiv" target="_blank">arxiv</a>
-<a href="https://zhenglisec.github.io/" class="btn--code" target="_blank">code</a>
+### <span class="pub-title">Cryptanalytic Properties of Mealy Machines</span>
+<font size="3">Zhongfeng Niu, Tim Beyne, <b>Kai Hu</b><sup class="corresp">✉</sup>, Meiqin Wang.<br>
+<i>CRYPTO 2026.</i></font>
+<a href="#" class="btn--paper" target="_blank">pdf</a>
 
-### <span style="color:rgb(39, 117, 182)">SeqMIA: Sequential-Metric Based Membership Inference Attack</span>
-<font size="3"> Hao Li$^*$, <b>Zheng Li$^*$</b>, Siyuan Wu, Chengrui Hu, Yutong Ye, Min Zhang, Dengguo Feng, Yang Zhang;
-<i>CCS 2024</i></font>
-<a href="https://zhenglisec.github.io/files/CCS24_SeqMIA.pdf" class="btn--paper" target="_blank">pdf</a>
-<a href="https://arxiv.org/abs/2407.15098" class="btn--arxiv" target="_blank">arxiv</a>
-<a href="https://github.com/AIPAG/SeqMIA" class="btn--code" target="_blank">code</a>
+### <span class="pub-title">Permutation-Based Hash from Non-Idealized Assumptions: Adding Feed-Forward to Sponge</span>
+<font size="3">Chun Guo, <b>Kai Hu</b>, Shuntian Jiang, Yanhong Fan, Yong Fu, Bart Preneel, Meiqin Wang.<br>
+<i>CRYPTO 2026.</i></font>
+<a href="https://eprint.iacr.org/2025/1006.pdf" class="btn--paper" target="_blank">pdf</a>
+<a href="https://eprint.iacr.org/2025/1006" class="btn--eprint" target="_blank">eprint</a>
 
-### <span style="color:rgb(39, 117, 182)">BadMerging: Backdoor Attacks Against Model Merging</span>
-<font size="3"> Jinghuai Zhang, Jianfeng Chi, <b>Zheng Li</b>, Kunlin Cai, Yang Zhang, Yuan Tian;
-<i>CCS 2024</i></font>
-<a href="https://zhenglisec.github.io/files/CCS24_BadMerging.pdf" class="btn--paper" target="_blank">pdf</a>
-<a href="https://arxiv.org/abs/2408.07362v1" class="btn--arxiv" target="_blank">arxiv</a>
-<a href="https://zhenglisec.github.io/" class="btn--code" target="_blank">code</a>
+### <span class="pub-title">uKNIT: Breaking Round-alignment for Cipher Design &mdash; Featuring uKNIT-BC, an Ultra Low-Latency Block Cipher</span>
+<font size="3"><b>Kai Hu</b>, Mustafa Khairallah, Thomas Peyrin, Quan Quan Tan.<br>
+<i>IACR Trans. Symmetric Cryptol. (ToSC) 2026 (2) / FSE 2027.</i></font>
+<a href="https://eprint.iacr.org/2024/1962.pdf" class="btn--paper" target="_blank">pdf</a>
+<a href="https://eprint.iacr.org/2024/1962" class="btn--eprint" target="_blank">eprint</a>
 
-### <span style="color:rgb(39, 117, 182)">SecurityNet: Assessing Machine Learning Vulnerabilities on Public Models</span>
-<font size="3"> Boyang Zhang, <b>Zheng Li</b>, Ziqing Yang, Xinlei He, Michael Backes, Mario Fritz, Yang Zhang;
-<i>USENIX Security 2024</i></font>
-<a href="https://www.usenix.org/system/files/sec24summer-prepub-617-zhang-boyang.pdf" class="btn--paper" target="_blank">pdf</a>
-<a href="https://arxiv.org/abs/2310.12665" class="btn--arxiv" target="_blank">arxiv</a>
-<a href="https://github.com/SecurityNet-Research/SecurityNet" class="btn--code" target="_blank">code</a>
+### <span class="pub-title">Round-Based Approximation of (Higher-Order) Differential-Linear Correlation</span>
+<font size="3"><b>Kai Hu</b>, Zhongfeng Niu, Meiqin Wang.<br>
+<i>EUROCRYPT 2026.</i></font>
+<a href="https://eprint.iacr.org/2026/358.pdf" class="btn--paper" target="_blank">pdf</a>
+<a href="https://eprint.iacr.org/2026/358" class="btn--eprint" target="_blank">eprint</a>
 
-### <span style="color:rgb(39, 117, 182)">Inside the Black Box: Detecting Data Leakage in Pre-trained Language Encoders</span>
-<font size="3"> Yuan Xin, <b>Zheng Li</b>, Ning Yu, Dingfan Chen, Mario Fritz, Michael Backes, Yang Zhang;
-<i>ECAI 2024</i></font>
-<a href="https://zhenglisec.github.io/" class="btn--paper" target="_blank">pdf</a>
-<a href="https://arxiv.org/abs/2408.11046" class="btn--arxiv" target="_blank">arxiv</a>
-<a href="https://zhenglisec.github.io/" class="btn--code" target="_blank">code</a>
+### <span class="pub-title">Cryptanalysis of Two Alternating Moduli Weak PRFs</span>
+<font size="3"><b>Kai Hu</b>, Gregor Leander, Håvard Raddum, Arne Sandrib, Aleksei Udovenko.<br>
+<i>IACR Trans. Symmetric Cryptol. (ToSC) 2026 (1) / FSE 2026.</i></font>
+<a href="https://eprint.iacr.org/2026/482.pdf" class="btn--paper" target="_blank">pdf</a>
+<a href="https://eprint.iacr.org/2026/482" class="btn--eprint" target="_blank">eprint</a>
 
-### <span style="color:rgb(39, 117, 182)">Detection and Attribution of Models Trained on Generated Data</span>
-<font size="3"> Ge Han, Ahmed Salem, <b>Zheng Li$^\dagger$</b>, Shanqing Guo, Michael Backes, Yang Zhang;
-<i>ICASSP 2024</i></font>
-<a href="https://zhenglisec.github.io/" class="btn--paper" target="_blank">pdf</a>
-<a href="https://zhenglisec.github.io/" class="btn--arxiv" target="_blank">arxiv</a>
-<a href="https://zhenglisec.github.io/" class="btn--code" target="_blank">code</a>
+### <span class="pub-title">Cube and Integral Attacks on ChiLow-32</span>
+<font size="3">Shuo Peng<sup class="corresp">✉</sup>, Akram Khalesi<sup class="corresp">✉</sup>, Zahra Ahmadian<sup class="corresp">✉</sup>, Hosein Hadipour<sup class="corresp">✉</sup>, Jiahui He<sup class="corresp">✉</sup>, <b>Kai Hu</b><sup class="corresp">✉</sup>, Zhongfeng Niu<sup class="corresp">✉</sup>, Shahram Rasoolzadeh<sup class="corresp">✉</sup>, Meiqin Wang<sup class="corresp">✉</sup>.<br>
+<i>IACR Trans. Symmetric Cryptol. (ToSC) 2026 (1) / FSE 2026.</i></font>
+<a href="https://eprint.iacr.org/2026/365.pdf" class="btn--paper" target="_blank">pdf</a>
+<a href="https://eprint.iacr.org/2026/365" class="btn--eprint" target="_blank">eprint</a>
 
-<!-- ### <span style="color:rgb(39, 117, 182)">PRJack: Pruning-Resistant Model Hijacking Attack Against Deep Learning Models</span>
-<font size="3"> Ge Han, <b>Zheng Li</b>, Shanqing Guo;
-<i>IJCNN 2024</i></font>
-<a href="https://zhenglisec.github.io/" class="btn--paper" target="_blank">pdf</a>
-<a href="https://zhenglisec.github.io/" class="btn--arxiv" target="_blank">arxiv</a>
-<a href="https://zhenglisec.github.io/" class="btn--code" target="_blank">code</a> -->
+### <span class="pub-title">Cryptanalytic Extraction of Convolutional Neural Networks</span>
+<font size="3">Xiaohan Sun, Hao Lei, Longxiang Wei, Xiaokang Qi, <b>Kai Hu</b>, Meiqin Wang, Wei Wang.<br>
+<i>ACISP 2026.</i></font>
+<a href="https://eprint.iacr.org/2026/139.pdf" class="btn--paper" target="_blank">pdf</a>
+<a href="https://eprint.iacr.org/2026/139" class="btn--eprint" target="_blank">eprint</a>
 
-### <span style="color:rgb(39, 117, 182)">Model Hijacking Attack in Federated Learning</span>
-<font size="3"><b>Zheng Li</b>, Siyuan Wu, Ruichuan Chen, Paarijaat Aditya, Istemi Ekin Akkus, Manohar Vanga, Min Zhang, Hao Li, Yang Zhang;</font>
-<a href="https://arxiv.org/abs/2408.02131" class="btn--arxiv" target="_blank">arxiv</a>
+<h2 id="2025">2025</h2>
 
-### <span style="color:rgb(39, 117, 182)">Membership Inference Attack Against Masked Image Modeling</span>
-<font size="3"><b>Zheng Li</b>, Xinlei He, Ning Yu, Yang Zhang;</font>
-<a href="https://arxiv.org/abs/2408.06825v1" class="btn--arxiv" target="_blank">arxiv</a>
+### <span class="pub-title">Unlocking Mix-Basis Potential: Geometric Approach for Combined Attacks</span>
+<font size="3"><b>Kai Hu</b>, Chi Zhang, Chengcheng Chang, Jiashu Zhang, Meiqin Wang, Thomas Peyrin.<br>
+<i>CRYPTO 2025.</i></font>
+<a href="https://eprint.iacr.org/2025/403.pdf" class="btn--paper" target="_blank">pdf</a>
+<a href="https://eprint.iacr.org/2025/403" class="btn--eprint" target="_blank">eprint</a>
 
-### <span style="color:rgb(39, 117, 182)">Jailbreaking Text-to-Image Models with LLM-Based Agents</span>
-<font size="3">Yingkai Dong, <b>Zheng Li</b>, Xiangtao Meng, Ning Yu, Shanqing Guo;</font>
-<a href="https://arxiv.org/abs/2408.00523" class="btn--arxiv" target="_blank">arxiv</a>
+### <span class="pub-title">Mix-Basis Geometric Approach to Boomerang Distinguishers</span>
+<font size="3">Chengcheng Chang, Hosein Hadipour, <b>Kai Hu</b><sup class="corresp">✉</sup>, Muzhou Li, Meiqin Wang.<br>
+<i>IACR Trans. Symmetric Cryptol. (ToSC) 2025 (3) / FSE 2026.</i></font>
+<a href="https://eprint.iacr.org/2025/402.pdf" class="btn--paper" target="_blank">pdf</a>
+<a href="https://eprint.iacr.org/2025/402" class="btn--eprint" target="_blank">eprint</a>
 
-<!-- ### <span style="color:rgb(39, 117, 182)">Membership Inference Attack Against Masked Image Modeling</span>
-<font size="3"><b>Zheng Li</b>, Xinlei He, Ning Yu, Yang Zhang;</font>
-<a href="https://arxiv.org/abs/2408.06825v1" class="btn--arxiv" target="_blank">arxiv</a> -->
+### <span class="pub-title">Addendum to How Small Can S-boxes Be?</span>
+<font size="3">Yu Sun, Lixuan Wu, Chenhao Jia, Tingting Cui, <b>Kai Hu</b><sup class="corresp">✉</sup>, Meiqin Wang.<br>
+<i>IACR Trans. Symmetric Cryptol. (ToSC) 2025 (2) / FSE 2026.</i></font>
+<a href="https://eprint.iacr.org/2025/961.pdf" class="btn--paper" target="_blank">pdf</a>
+<a href="https://eprint.iacr.org/2025/961" class="btn--eprint" target="_blank">eprint</a>
 
-<!-- ### <span style="color:rgb(39, 117, 182)">PRJack: Pruning-Resistant Model Hijacking Attack Against Deep Learning Models</span>
-<font size="3"> Ge Han, <b>Zheng Li$\dagger$</b>, Shanqing Guo;
-<i>IJCNN 2024</i></font>
-<a href="https://zhenglisec.github.io/" class="btn--paper" target="_blank">pdf</a>
-<a href="https://zhenglisec.github.io/" class="btn--arxiv" target="_blank">arxiv</a>
-<a href="https://zhenglisec.github.io/" class="btn--code" target="_blank">code</a> -->
+### <span class="pub-title">Quasidifferential Saves Infeasible Differential: Improved Weak-Key Key-Recovery Attacks on Round-Reduced GIFT</span>
+<font size="3">Chengcheng Chang, Meiqin Wang, Wei Wang, <b>Kai Hu</b><sup class="corresp">✉</sup>.<br>
+<i>CT-RSA 2025.</i></font>
+<a href="https://eprint.iacr.org/2025/1031.pdf" class="btn--paper" target="_blank">pdf</a>
+<a href="https://eprint.iacr.org/2025/1031" class="btn--eprint" target="_blank">eprint</a>
 
-<h2 id='2023'>2023</h2>
+### <span class="pub-title">Improved Key Recovery Attacks of Ascon</span>
+<font size="3">Shuo Peng, <b>Kai Hu</b><sup class="corresp">✉</sup>, Jiahui He, Meiqin Wang.<br>
+<i>CT-RSA 2025.</i></font>
+<a href="https://eprint.iacr.org/2025/1029.pdf" class="btn--paper" target="_blank">pdf</a>
+<a href="https://eprint.iacr.org/2025/1029" class="btn--eprint" target="_blank">eprint</a>
 
-### <span style="color:rgb(39, 117, 182)">On the Privacy Risks of Machine Learning Models</span>
-<font size="3"> <b>Zheng Li</b>;
-<i>Ph.D. Dissertation</i></font>
-<a href="https://publikationen.sulb.uni-saarland.de/handle/20.500.11880/36610?locale=en" class="btn--paper" target="_blank">pdf</a>
-<a href="https://hosting.services.iit.cnr.it/STM-WG/contentpage06.html" class="btn--success" target="_blank">ERCIM WG STM Best Ph.D. Thesis Award 2024</a>
+### <span class="pub-title">How Small Can S-boxes Be?</span>
+<font size="3">Chenhao Jia, Tingting Cui, Qing Ling, Yan He, <b>Kai Hu</b>, Yu Sun, Meiqin Wang.<br>
+<i>IACR Trans. Symmetric Cryptol. (ToSC) 2025 / FSE 2025.</i></font>
+<a href="#" class="btn--paper" target="_blank">pdf</a>
+<a href="#" class="btn--eprint" target="_blank">eprint</a>
 
-### <span style="color:rgb(39, 117, 182)">UnGANable: Defending Against GAN-based Face Manipulation</span>
-<font size="3"> <b>Zheng Li</b>, Ning Yu, Ahmed Salem, Michael Backes, Mario Fritz, Yang Zhang;
-<i>USENIX Security 2023</i></font>
-<a href="https://arxiv.org/abs/2210.00957" class="btn--paper" target="_blank">pdf</a>
-<a href="https://arxiv.org/abs/2210.00957" class="btn--arxiv" target="_blank">arxiv</a>
-<a href="https://github.com/zhenglisec/UnGANable" class="btn--code" target="_blank">code</a>
+### <span class="pub-title">Symmetric Twin Column Parity Mixers and their Applications</span>
+<font size="3">Hao Lei, Raghvendra Rohit, Guoxiao Liu, Jiahui He, Mohamed Rachidi, Keting Jia, <b>Kai Hu</b><sup class="corresp">✉</sup>, Meiqin Wang.<br>
+<i>IACR Trans. Symmetric Cryptol. (ToSC) 2024 (4) / FSE 2025.</i></font>
+<a href="#" class="btn--paper" target="_blank">pdf</a>
+<a href="#" class="btn--eprint" target="_blank">eprint</a>
 
-### <span style="color:rgb(39, 117, 182)">DE-FAKE: Detection and Attribution of Fake Images Generated by Text-to-Image Generation Models</span>
-<font size="3">Zeyang Sha, <b>Zheng Li</b>, Ning Yu, Yang Zhang;
-<i>CCS 2023</i></font>
-<a href="https://arxiv.org/abs/2210.06998" class="btn--paper" target="_blank">pdf</a>
-<a href="https://arxiv.org/abs/2210.06998" class="btn--arxiv" target="_blank">arxiv</a>
-<a href="https://arxiv.org/abs/2210.06998" class="btn--code" target="_blank">code</a>
-<a href="https://csaw24-eur-arc.sciencesconf.org/" class="btn--success" target="_blank">Best Paper Finalist at CSAW Europe 2024</a>
+### <span class="pub-title">Perfect Monomial Prediction for Modular Addition</span>
+<font size="3"><b>Kai Hu</b><sup class="corresp">✉</sup>, Trevor Yap.<br>
+<i>IACR Trans. Symmetric Cryptol. (ToSC) 2024 (4) / FSE 2025.</i></font>
+<a href="#" class="btn--paper" target="_blank">pdf</a>
+<a href="#" class="btn--eprint" target="_blank">eprint</a>
 
-### <span style="color:rgb(39, 117, 182)">Backdoor Attacks Against Dataset Distillation</span>
-<font size="3">Yugeng Liu, <b>Zheng Li</b>, Michael Backes, Yun Shen, Yang Zhang;
-<i>NDSS 2023</i></font>
-<a href="https://arxiv.org/abs/2301.01197" class="btn--paper" target="_blank">pdf</a>
-<a href="https://arxiv.org/abs/2301.01197" class="btn--arxiv" target="_blank">arxiv</a>
-<a href="https://github.com/liuyugeng/baadd" class="btn--code" target="_blank">code</a>
+### <span class="pub-title">Improved Conditional Cube Attacks on Ascon AEADs in Nonce-Respecting Settings with a Break-Fix Strategy</span>
+<font size="3"><b>Kai Hu</b>.<br>
+<i>IACR Trans. Symmetric Cryptol. (ToSC) 2024 / FSE 2025.</i></font>
+<a href="#" class="btn--paper" target="_blank">pdf</a>
+<a href="#" class="btn--eprint" target="_blank">eprint</a>
 
-### <span style="color:rgb(39, 117, 182)">Data Poisoning Attacks Against Multimodal Encoders</span>
-<font size="3">Ziqing Yang, Xinlei He, <b>Zheng Li</b>, Michael Backes, Mathias Humbert, Pascal Berrang, Yang Zhang;
-<i>ICML 2023</i></font>
-<a href="https://arxiv.org/abs/2209.15266" class="btn--paper" target="_blank">pdf</a>
-<a href="https://arxiv.org/abs/2209.15266" class="btn--arxiv" target="_blank">arxiv</a>
-<a href="https://github.com/zqypku/mm_poison/" class="btn--code" target="_blank">code</a>
+### <span class="pub-title">Cryptanalysis of Full-Round BipBip</span>
+<font size="3">Jinliang Wang, Christina Boura, Patrick Derbez, <b>Kai Hu</b>, Muzhou Li, Meiqin Wang.<br>
+<i>IACR Trans. Symmetric Cryptol. (ToSC) 2024 / FSE 2025.</i></font>
+<a href="#" class="btn--paper" target="_blank">pdf</a>
+<a href="#" class="btn--eprint" target="_blank">eprint</a>
 
-### <span style="color:rgb(39, 117, 182)">NOTABLE: Transferable Backdoor Attacks Against Prompt-based NLP Models</span>
-<font size="3">Kai Mei, <b>Zheng Li</b>, Zhenting Wang, Yang Zhang, Shiqing Ma;
-<i>ACL 2023</i></font>
-<a href="https://zhenglisec.github.io/" class="btn--paper" target="_blank">pdf</a>
-<a href="https://arxiv.org/abs/2305.17826" class="btn--arxiv" target="_blank">arxiv</a>
-<a href="https://github.com/RU-System-Software-and-Security/Notable" class="btn--code" target="_blank">code</a>
+### <span class="pub-title">Towards Better Integral Distinguishers over $\mathbb{F}_{p}$ Based on Exact Coefficients of Monomials</span>
+<font size="3">Muzhou Li, Jiamin Cui, Longzheng Cui, <b>Kai Hu</b>, Chao Niu, Meiqin Wang.<br>
+<i>IEEE Transactions on Information Theory, 2025.</i></font>
+<a href="https://ieeexplore.ieee.org/document/11373204/" class="btn--paper" target="_blank">pdf</a>
+<a href="https://eprint.iacr.org/2025/955" class="btn--eprint" target="_blank">eprint</a>
 
-### <span style="color:rgb(39, 117, 182)">Watermarking Diffusion Model</span>
-<font size="3">Yugeng Liu, <b>Zheng Li</b>, Michael Backes, Yun Shen, Yang Zhang;</font>
-<a href="https://arxiv.org/abs/2305.12502" class="btn--arxiv" target="_blank">arxiv</a>
+### <span class="pub-title">Meet-in-the-Middle Attack on 4+4 Rounds of SCARF under Single-Tweak Setting</span>
+<font size="3">Siwei Chen<sup class="corresp">✉</sup>, <b>Kai Hu</b><sup class="corresp">✉</sup>, Guozhen Liu<sup class="corresp">✉</sup>, Zhongfeng Niu<sup class="corresp">✉</sup>, Quan Quan Tan<sup class="corresp">✉</sup>, Shichang Wang<sup class="corresp">✉</sup>.<br>
+<i>Designs, Codes and Cryptography, 2025.</i></font>
+<a href="https://eprint.iacr.org/2024/1270.pdf" class="btn--paper" target="_blank">pdf</a>
+<a href="https://eprint.iacr.org/2024/1270" class="btn--eprint" target="_blank">eprint</a>
 
-### <span style="color:rgb(39, 117, 182)">Generative Watermarking Against Unauthorized Subject-Driven Image Synthesis</span>
-<font size="3">Yihan Ma, Zhengyu Zhao, Xinlei He, <b>Zheng Li</b>, Michael Backes, Yang Zhang;</font>
-<a href="https://arxiv.org/abs/2306.07754" class="btn--arxiv" target="_blank">arxiv</a>
+<h2 id="2024">2024</h2>
 
-<h2 id='2022'>2022</h2>
+### <span class="pub-title">Speeding Up Preimage and Key-Recovery Attacks with Highly Biased Differential-Linear Approximations</span>
+<font size="3">Zhongfeng Niu, <b>Kai Hu</b>, Siwei Sun, Zhiyu Zhang, Meiqin Wang.<br>
+<i>CRYPTO 2024.</i></font>
+<a href="#" class="btn--paper" target="_blank">pdf</a>
+<a href="#" class="btn--eprint" target="_blank">eprint</a>
 
-### <span style="color:rgb(39, 117, 182)">Auditing Membership Leakages of Multi-Exit Networks</span>
-<font size="3"><b>Zheng Li</b>, Yiyong Liu, Xinlei He, Ning Yu, Michael Backes, Yang Zhang;
-<i>CCS 2022</i></font>
-<a href="https://arxiv.org/abs/2208.11180" class="btn--paper" target="_blank">pdf</a>
-<a href="https://arxiv.org/abs/2208.11180" class="btn--arxiv" target="_blank">arxiv</a>
-<a href="https://github.com/zhenglisec/Multi-Exit-Privacy" class="btn--code" target="_blank">code</a>
+### <span class="pub-title">Massive Superpoly Recovery with a Meet-in-the-Middle Framework &mdash; Improved Cube Attacks on Trivium and Kreyvium</span>
+<font size="3">Jiahui He, <b>Kai Hu</b>, Hao Lei, Meiqin Wang.<br>
+<i>EUROCRYPT 2024.</i></font>
+<a href="#" class="btn--paper" target="_blank">pdf</a>
+<a href="#" class="btn--eprint" target="_blank">eprint</a>
 
-### <span style="color:rgb(39, 117, 182)">FuzzGAN: A Generation-Based Fuzzing Framework For Testing Deep Neural Networks</span>
-<font size="3">Ge Han, <b>Zheng Li</b>, Peng Tang, Chengyu Hu, Shanqing Guo;
-<i>HPCC 2022</i></font>
-<a href="https://ieeexplore.ieee.org/document/10074689?denied=" class="btn--paper" target="_blank">pdf</a>
-<a href="https://zhenglisec.github.io/" class="btn--arxiv" target="_blank">arxiv</a>
-<a href="https://zhenglisec.github.io/" class="btn--code" target="_blank">code</a>
+### <span class="pub-title">Integral Attack on the Full FUTURE Block Cipher</span>
+<font size="3">Zeyu Xu, Jiamin Cui, <b>Kai Hu</b><sup class="corresp">✉</sup>, Meiqin Wang.<br>
+<i>Tsinghua Science and Technology, 2024.</i></font>
+<a href="https://eprint.iacr.org/2024/549.pdf" class="btn--paper" target="_blank">pdf</a>
+<a href="https://eprint.iacr.org/2024/549" class="btn--eprint" target="_blank">eprint</a>
 
-### <span style="color:rgb(39, 117, 182)">Membership-Doctor: Comprehensive Assessment of Membership Inference Against Machine Learning Models</span>
-<font size="3">Xinlei He, <b>Zheng Li</b>, Weilin Xu, Cory Cornelius, Yang Zhang;</font>
-<a href="https://arxiv.org/abs/2208.10445" class="btn--arxiv" target="_blank">arxiv</a>
+### <span class="pub-title">AlgSAT &mdash; a SAT Method for Search and Verification of Differential Characteristics from Algebraic Perspective</span>
+<font size="3">Huina Li, Haochen Zhang, Guozhen Liu, <b>Kai Hu</b><sup class="corresp">✉</sup>, Jian Guo<sup class="corresp">✉</sup>, Weidong Qiu<sup class="corresp">✉</sup>.<br>
+<i>ACISP 2024.</i></font>
+<a href="https://link.springer.com/chapter/10.1007/978-981-97-5025-2_23" class="btn--paper" target="_blank">pdf</a>
+<a href="https://eprint.iacr.org/2022/1641" class="btn--eprint" target="_blank">eprint</a>
 
-### <span style="color:rgb(39, 117, 182)">Membership Inference Attacks Against Text-to-image Generation Models</span>
-<font size="3">Yixin Wu, Ning Yu, <b>Zheng Li</b>, Michael Backes, Yang Zhang;</font>
-<a href="https://arxiv.org/abs/2210.00968" class="btn--arxiv" target="_blank">arxiv</a>
+<h2 id="2023">2023</h2>
 
-### <span style="color:rgb(39, 117, 182)">Backdoor Attacks in the Supply Chain of Masked Image Modeling</span>
-<font size="3">Xinyue Shen, Xinlei He, <b>Zheng Li</b>, Yun Shen, Michael Backes, Yang Zhang;</font>
-<a href="https://arxiv.org/abs/2210.01632" class="btn--arxiv" target="_blank">arxiv</a>
+### <span class="pub-title">More Balanced Polynomials: Cube Attacks on 810- and 825-Round Trivium with Practical Complexities</span>
+<font size="3">Hao Lei, Jiahui He, <b>Kai Hu</b>, Meiqin Wang.<br>
+<i>SAC 2023.</i></font>
+<a href="#" class="btn--paper" target="_blank">pdf</a>
+<a href="#" class="btn--eprint" target="_blank">eprint</a>
 
+### <span class="pub-title">Revisiting Higher-Order Differential-Linear Attacks from an Algebraic Perspective</span>
+<font size="3"><b>Kai Hu</b><sup class="corresp">✉</sup>, Thomas Peyrin, Quan Quan Tan, Trevor Yap.<br>
+<i>ASIACRYPT 2023.</i></font>
+<a href="#" class="btn--paper" target="_blank">pdf</a>
+<a href="#" class="btn--eprint" target="_blank">eprint</a>
 
-<h2 id='2021'>2021</h2>
+<h2 id="2022">2022</h2>
 
-### <span style="color:rgb(39, 117, 182)">Membership Leakage in Label-Only Exposures</span>
-<font size="3"><b>Zheng Li</b>, Yang Zhang;
-<i>CCS 2021</i></font>
-<a href="https://arxiv.org/abs/2007.15528" class="btn--paper" target="_blank">pdf</a>
-<a href="https://arxiv.org/abs/2007.15528" class="btn--arxiv" target="_blank">arxiv</a>
-<a href="https://github.com/zhenglisec/Decision-based-MIA" class="btn--code" target="_blank">code</a>
+### <span class="pub-title">Finding All Impossible Differentials When Considering the DDT</span>
+<font size="3"><b>Kai Hu</b>, Thomas Peyrin, Meiqin Wang.<br>
+<i>SAC 2022.</i></font>
+<a href="#" class="btn--paper" target="_blank">pdf</a>
+<a href="#" class="btn--eprint" target="_blank">eprint</a>
 
+### <span class="pub-title">Stretching Cube Attacks: Improved Methods to Recover Massive Superpolies</span>
+<font size="3">Jiahui He, <b>Kai Hu</b>, Bart Preneel, Meiqin Wang.<br>
+<i>ASIACRYPT 2022.</i></font>
+<a href="#" class="btn--paper" target="_blank">pdf</a>
+<a href="#" class="btn--eprint" target="_blank">eprint</a>
 
-<h2 id='2019'>2019</h2>
+### <span class="pub-title">On the Field-Based Division Property: Applications to MiMC, Feistel MiMC and GMiMC</span>
+<font size="3">Jiamin Cui, <b>Kai Hu</b>, Meiqin Wang, Puwen Wei.<br>
+<i>ASIACRYPT 2022.</i></font>
+<a href="#" class="btn--paper" target="_blank">pdf</a>
+<a href="#" class="btn--eprint" target="_blank">eprint</a>
 
-### <span style="color:rgb(39, 117, 182)">How to Prove Your Model Belongs to You: A Blind-Watermark based Framework to Protect Intellectual Property of DNN</span>
-<font size="3"><b>Zheng Li</b>,  Chengyu Hu, Yang Zhang, Shanqing Guo;
-<i>ACSAC 2019</i></font>
-<a href="https://arxiv.org/abs/1903.01743" class="btn--paper" target="_blank">pdf</a>
-<a href="https://arxiv.org/abs/1903.01743" class="btn--arxiv" target="_blank">arxiv</a>
-<a href="https://github.com/zhenglisec/Blind-Watermark-for-DNN" class="btn--code" target="_blank">code</a>
+### <span class="pub-title">Integral Attacks on Pyjamask-96 and Round-Reduced Pyjamask-128</span>
+<font size="3">Jiamin Cui, <b>Kai Hu</b>, Qingju Wang, Meiqin Wang.<br>
+<i>CT-RSA 2022.</i></font>
+<a href="#" class="btn--paper" target="_blank">pdf</a>
+<a href="#" class="btn--eprint" target="_blank">eprint</a>
 
+<h2 id="2021">2021</h2>
 
-### <span style="color:rgb(39, 117, 182)">DeepKeyStego: Protecting Communication by Key-dependent Steganography with Deep Networks</span>
-<font size="3"><b>Zheng Li</b>,  Ge Han, Shanqing Guo, Chengyu Hu;
-<i>HPCC 2019</i></font>
-<a href="https://ieeexplore.ieee.org/document/8855704" class="btn--paper" target="_blank">pdf</a>
-<a href="https://ieeexplore.ieee.org/document/8855704" class="btn--arxiv" target="_blank">arxiv</a>
-<a href="https://github.com/zhenglisec/DeepKeyStego" class="btn--code" target="_blank">code</a>
+### <span class="pub-title">Massive Superpoly Recovery with Nested Monomial Predictions</span>
+<font size="3"><b>Kai Hu</b>, Siwei Sun, Yosuke Todo, Meiqin Wang, Qingju Wang.<br>
+<i>ASIACRYPT 2021.</i></font>
+<a href="#" class="btn--paper" target="_blank">pdf</a>
+<a href="#" class="btn--eprint" target="_blank">eprint</a>
 
+### <span class="pub-title">Misuse-Free Key-Recovery and Distinguishing Attacks on 7-Round Ascon</span>
+<font size="3">Raghvendra Rohit, <b>Kai Hu</b>, Sumanta Sarkar, Siwei Sun.<br>
+<i>IACR Trans. Symmetric Cryptol. (ToSC) 2021 / FSE 2022.</i></font>
+<a href="#" class="btn--paper" target="_blank">pdf</a>
+<a href="#" class="btn--eprint" target="_blank">eprint</a>
 
+### <span class="pub-title">Pushing the Limits: Searching for Implementations with the Smallest Area for Lightweight S-Boxes</span>
+<font size="3">Zhenyu Lu, Weijia Wang, <b>Kai Hu</b>, Yanhong Fan, Lixuan Wu, Meiqin Wang.<br>
+<i>INDOCRYPT 2021.</i></font>
+<a href="#" class="btn--paper" target="_blank">pdf</a>
+<a href="#" class="btn--eprint" target="_blank">eprint</a>
 
+### <span class="pub-title">A Secure IoT Firmware Update Scheme Against SCPA and DoS Attacks</span>
+<font size="3">Yan-Hong Fan, Mei-Qin Wang, Yan-Bin Li, <b>Kai Hu</b>, Muzhou Li.<br>
+<i>Journal of Computer Science and Technology, 2021.</i></font>
+<a href="#" class="btn--paper" target="_blank">pdf</a>
+
+### <span class="pub-title">STP Models of Optimal Differential and Linear Trail for S-box Based Ciphers</span>
+<font size="3">Yu Liu, Huicong Liang, Muzhou Li, Luning Huang, <b>Kai Hu</b>, Chenhe Yang, Meiqin Wang.<br>
+<i>Science China Information Sciences, 2021.</i></font>
+<a href="#" class="btn--paper" target="_blank">pdf</a>
+
+<h2 id="2020">2020</h2>
+
+### <span class="pub-title">An Algebraic Formulation of the Division Property: Revisiting Degree Evaluations, Cube Attacks, and Key-Independent Sums</span>
+<font size="3"><b>Kai Hu</b>, Siwei Sun, Meiqin Wang, Qingju Wang.<br>
+<i>ASIACRYPT 2020.</i></font>
+<a href="#" class="btn--paper" target="_blank">pdf</a>
+<a href="#" class="btn--eprint" target="_blank">eprint</a>
+
+### <span class="pub-title">MixColumns Coefficient Property and Security of the AES with a Secret S-Box</span>
+<font size="3">Xin An, <b>Kai Hu</b>, Meiqin Wang.<br>
+<i>AFRICACRYPT 2020.</i></font>
+<a href="#" class="btn--paper" target="_blank">pdf</a>
+<a href="#" class="btn--eprint" target="_blank">eprint</a>
+
+### <span class="pub-title">Finding Bit-Based Division Property for Ciphers with Complex Linear Layers</span>
+<font size="3"><b>Kai Hu</b>, Qingju Wang, Meiqin Wang.<br>
+<i>IACR Trans. Symmetric Cryptol. (ToSC) 2020 / FSE 2021.</i></font>
+<a href="#" class="btn--paper" target="_blank">pdf</a>
+<a href="#" class="btn--eprint" target="_blank">eprint</a>
+
+<h2 id="2019">2019</h2>
+
+### <span class="pub-title">Automatic Search for a Variant of Division Property Using Three Subsets</span>
+<font size="3"><b>Kai Hu</b>, Meiqin Wang.<br>
+<i>CT-RSA 2019.</i></font>
+<a href="#" class="btn--paper" target="_blank">pdf</a>
+<a href="#" class="btn--eprint" target="_blank">eprint</a>
+
+### <span class="pub-title">Related-Tweak Statistical Saturation Cryptanalysis and Its Application on QARMA</span>
+<font size="3">Muzhou Li, <b>Kai Hu</b>, Meiqin Wang.<br>
+<i>IACR Trans. Symmetric Cryptol. (ToSC) 2019 / FSE 2020.</i></font>
+<a href="#" class="btn--paper" target="_blank">pdf</a>
+<a href="#" class="btn--eprint" target="_blank">eprint</a>
+
+<h2 id="2018">2018</h2>
+
+### <span class="pub-title">Towards Key-Dependent Integral and Impossible Differential Distinguishers on 5-Round AES</span>
+<font size="3"><b>Kai Hu</b>, Tingting Cui, Chao Gao, Meiqin Wang.<br>
+<i>SAC 2018.</i></font>
+<a href="#" class="btn--paper" target="_blank">pdf</a>
+<a href="#" class="btn--eprint" target="_blank">eprint</a>

@@ -7,13 +7,13 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Zheng Li / 李政"
+title                    : "Kai Hu / 胡凯"
 title_separator          : "-"
-name                     : &name "Zheng Li"
-description              : &description "Full professor at Shandong University"
-url                      : https://zhenglisec.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+name                     : &name "Kai Hu"
+description              : &description "Researcher at Shandong University, working on symmetric-key cryptography"
+url                      : https://hukaisdu.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "academicpages/academicpages.github.io"
+repository               : "hukaisdu/hukaisdu.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
@@ -57,7 +57,7 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : zhenglisec
+  username               :
 facebook:
   username               :
   app_id                 :
@@ -80,15 +80,15 @@ analytics:
 
 # Site Author
 author:
-  name             : "Zheng Li"
-  avatar           : "zheng.png"
-  bio              : "Professor at Shandong University"
+  name             : "Kai Hu"
+  avatar           : "Kai.jpg"
+  bio              : "Researcher at Shandong University"
   location         : "Qingdao, China"
   employer         :
-  pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : "https://scholar.google.com/citations?user=xEAaaGsAAAAJ&hl=en"
-  email            :  "zheng.li@sdu.edu.cn"
-  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
+  pubmed           :
+  googlescholar    : "https://scholar.google.com/citations?user=NzLi9xMAAAAJ"
+  email            : "kai.hu@sdu.edu.cn"
+  researchgate     :
   uri              :
   bitbucket        :
   codepen          :
@@ -96,26 +96,26 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "zhenglisec"
+  github           : "hukaisdu"
   google_plus      :
   keybase          :
   instagram        :
-  impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
+  impactstory      :
   lastfm           :
   linkedin         :
-  orcid            : "http://orcid.org/0000-0002-4466-7523"
+  orcid            :
   pinterest        :
   soundcloud       :
-  stackoverflow    : # http://stackoverflow.com/users/123456/username
+  stackoverflow    :
   steam            :
   tumblr           :
-  twitter          : 
+  twitter          :
   vine             :
   weibo            :
   xing             :
   youtube          :
   wikipedia        :
-  dplp             : "https://dblp.org/pid/10/1143-23"
+  dblp             : "https://dblp.org/pid/180/3506.html"
 
 
 # Reading Files

@@ -1,23 +1,73 @@
 {% include base_path %}
 
+{% if page.lang == 'zh' %}
+  {% assign home_url = '/zh/' %}
+  {% assign nav_pubs = '论文' %}
+  {% assign nav_pubs_url = '/zh/publications/' %}
+  {% assign nav_talks = '学术报告' %}
+  {% assign nav_talks_url = '/zh/talks/' %}
+  {% assign nav_teaching = '教学' %}
+  {% assign nav_teaching_url = '/zh/teaching/' %}
+  {% assign nav_awards = '奖项' %}
+  {% assign nav_awards_url = '/zh/awards/' %}
+  {% assign lang_toggle_text = 'English' %}
+  {% assign lang_toggle_url = page.alt_url | default: '/' %}
+{% else %}
+  {% assign home_url = '/' %}
+  {% assign nav_pubs = 'Publications' %}
+  {% assign nav_pubs_url = '/publications/' %}
+  {% assign nav_talks = 'Talks' %}
+  {% assign nav_talks_url = '/talks/' %}
+  {% assign nav_teaching = 'Teaching' %}
+  {% assign nav_teaching_url = '/teaching/' %}
+  {% assign nav_awards = 'Awards' %}
+  {% assign nav_awards_url = '/awards/' %}
+  {% assign lang_toggle_text = '中文' %}
+  {% assign lang_toggle_url = page.alt_url | default: '/zh/' %}
+{% endif %}
+
+<style>
+.lang-toggle {
+  position: absolute;
+  top: 0.7em;
+  right: 1em;
+  font-size: 0.85em;
+  color: #4a7a8c;
+  text-decoration: none;
+  padding: 3px 10px;
+  border: 1px solid #4a7a8c;
+  border-radius: 4px;
+  z-index: 100;
+  background: white;
+  font-weight: 600;
+}
+.lang-toggle:hover {
+  background: #4a7a8c;
+  color: white;
+  text-decoration: none;
+}
+@media (min-width: 64em) {
+  .greedy-nav .visible-links > .masthead__menu-item--lg {
+    min-width: 22%;
+  }
+}
+</style>
+
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         <button><div class="navicon"></div></button>
         <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ base_path }}/">{{ site.title }}</a></li>
-          {% for link in site.data.navigation.main %}
-            {% if link.url contains 'http' %}
-              {% assign domain = '' %}
-              {% else %}
-              {% assign domain = base_path %}
-            {% endif %}
-            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
-          {% endfor %}
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ base_path }}{{ home_url }}" style="display: inline-flex; align-items: center; gap: 8px;"><img src="{{ base_path }}/images/sdu-logo.png" alt="SDU" style="height: 32px; width: auto; vertical-align: middle;">{{ site.title }}</a></li>
+          <li class="masthead__menu-item"><a href="{{ base_path }}{{ nav_pubs_url }}">{{ nav_pubs }}</a></li>
+          <li class="masthead__menu-item"><a href="{{ base_path }}{{ nav_talks_url }}">{{ nav_talks }}</a></li>
+          <li class="masthead__menu-item"><a href="{{ base_path }}{{ nav_teaching_url }}">{{ nav_teaching }}</a></li>
+          <li class="masthead__menu-item"><a href="{{ base_path }}{{ nav_awards_url }}">{{ nav_awards }}</a></li>
         </ul>
         <ul class="hidden-links hidden"></ul>
       </nav>
+      <a class="lang-toggle" href="{{ base_path }}{{ lang_toggle_url }}">{{ lang_toggle_text }}</a>
     </div>
   </div>
 </div>
