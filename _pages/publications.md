@@ -115,6 +115,12 @@ A full list is also available on [DBLP](https://dblp.org/pid/180/3506.html) and 
 <a href="https://eprint.iacr.org/2026/139.pdf" class="btn--paper" target="_blank">pdf</a>
 <a href="https://eprint.iacr.org/2026/139" class="btn--eprint" target="_blank">eprint</a>
 
+### <span class="pub-title">Delving Deep into Security Guarantees against Integral Distinguishers with Applications to PRESENT, TWINE and LBLOCK</span>
+<font size="3">Shuo Peng, Jiahui He, <b>Kai Hu</b><sup class="corresp">✉</sup>, Meiqin Wang.<br>
+<i>Designs, Codes and Cryptography, 2026.</i></font>
+<a href="https://eprint.iacr.org/2026/961.pdf" class="btn--paper" target="_blank">pdf</a>
+<a href="https://eprint.iacr.org/2026/961" class="btn--eprint" target="_blank">eprint</a>
+
 <h2 id="2025">2025</h2>
 
 ### <span class="pub-title">Unlocking Mix-Basis Potential: Geometric Approach for Combined Attacks</span>
