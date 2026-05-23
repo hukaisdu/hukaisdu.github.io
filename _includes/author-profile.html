@@ -126,16 +126,36 @@
       {% if author.dblp %}
         <li><a href="{{ author.dblp }}"><i class="ai ai-dblp ai-fw" aria-hidden="true"></i> DBLP</a></li>
       {% endif %}
-      <li id="busuanzi_container_site_pv" style="display:none;">
+      <li id="gc-visits-container" style="display:none;">
         <i class="fas fa-fw fa-eye" aria-hidden="true"></i>
         {% if page.lang == 'zh' %}访问量{% else %}Visits{% endif %}:
-        <span id="busuanzi_value_site_pv">0</span>
+        <span id="gc-visits">0</span>
       </li>
-      <li id="busuanzi_container_site_uv" style="display:none;">
+      <li id="gc-visitors-container" style="display:none;">
         <i class="fas fa-fw fa-user" aria-hidden="true"></i>
         {% if page.lang == 'zh' %}访客{% else %}Visitors{% endif %}:
-        <span id="busuanzi_value_site_uv">0</span>
+        <span id="gc-visitors">0</span>
       </li>
     </ul>
   </div>
 </div>
+<script>
+  (function () {
+    fetch('https://hukaisdu.goatcounter.com/counter/TOTAL.json')
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) {
+        if (!d) return;
+        var pv = document.getElementById('gc-visits');
+        var uv = document.getElementById('gc-visitors');
+        if (pv && d.count != null) {
+          pv.textContent = d.count;
+          document.getElementById('gc-visits-container').style.display = '';
+        }
+        if (uv && d.count_unique != null) {
+          uv.textContent = d.count_unique;
+          document.getElementById('gc-visitors-container').style.display = '';
+        }
+      })
+      .catch(function () {});
+  })();
+</script>
