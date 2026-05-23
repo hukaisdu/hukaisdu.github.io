@@ -2,6 +2,28 @@
 
 <script data-goatcounter="https://hukaisdu.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
+<script>
+  (function () {
+    fetch('https://hukaisdu.goatcounter.com/counter/TOTAL.json')
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) {
+        if (!d) return;
+        var pv = document.getElementById('gc-visits');
+        var uv = document.getElementById('gc-visitors');
+        if (pv && d.count != null) {
+          pv.textContent = d.count;
+          var pvc = document.getElementById('gc-visits-container');
+          if (pvc) pvc.style.display = '';
+        }
+        if (uv && d.count_unique != null) {
+          uv.textContent = d.count_unique;
+          var uvc = document.getElementById('gc-visitors-container');
+          if (uvc) uvc.style.display = '';
+        }
+      })
+      .catch(function () {});
+  })();
+</script>
 
 {% include analytics.html %}
 {% include /comments-providers/scripts.html %}

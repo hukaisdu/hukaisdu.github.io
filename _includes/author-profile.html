@@ -139,23 +139,3 @@
     </ul>
   </div>
 </div>
-<script>
-  (function () {
-    fetch('https://hukaisdu.goatcounter.com/counter/TOTAL.json')
-      .then(function (r) { return r.ok ? r.json() : null; })
-      .then(function (d) {
-        if (!d) return;
-        var pv = document.getElementById('gc-visits');
-        var uv = document.getElementById('gc-visitors');
-        if (pv && d.count != null) {
-          pv.textContent = d.count;
-          document.getElementById('gc-visits-container').style.display = '';
-        }
-        if (uv && d.count_unique != null) {
-          uv.textContent = d.count_unique;
-          document.getElementById('gc-visitors-container').style.display = '';
-        }
-      })
-      .catch(function () {});
-  })();
-</script>
