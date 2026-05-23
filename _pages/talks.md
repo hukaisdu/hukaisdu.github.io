@@ -22,6 +22,10 @@ alt_url: /zh/talks/
 }
 </style>
 
+### <span class="pub-title">Cryptanalytic Properties of Mealy Machines</span>
+<font size="3"><i>Cryptography Salon 2026 &mdash; Frontier Forum on Cryptanalysis. Changsha, China. May 22&ndash;24, 2026.</i></font>
+<a href="{{ site.baseurl }}/files/Changsha2026-Mealy.pdf" class="btn--paper" target="_blank">slides</a>
+
 ### <span class="pub-title">Cryptanalysis and Tool-Based Search</span>
 <font size="3"><i>Invited lecturer at the <strong>2nd Spring School on Symmetric Cryptography (SoSC 2026)</strong>, co-located with FSE 2026. Nanyang Technological University, Singapore. March 16&ndash;18, 2026.</i></font>
 <a href="https://github.com/hukaisdu/FSE-2026-SoSC-Cryptanalysis" class="btn--paper" target="_blank">materials</a>

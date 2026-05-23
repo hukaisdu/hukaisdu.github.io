@@ -22,6 +22,10 @@ alt_url: /talks/
 }
 </style>
 
+### <span class="pub-title">Cryptanalytic Properties of Mealy Machines</span>
+<font size="3"><i>2026 年密码学沙龙 &mdash; 密码分析前沿论坛，中国长沙。2026 年 5 月 22&ndash;24 日。</i></font>
+<a href="{{ site.baseurl }}/files/Changsha2026-Mealy.pdf" class="btn--paper" target="_blank">slides</a>
+
 ### <span class="pub-title">Cryptanalysis and Tool-Based Search</span>
 <font size="3"><i>受邀于 <strong>第二届对称密码学春季学校 (SoSC 2026)</strong> 主讲一天课程，与 FSE 2026 同期举办。新加坡南洋理工大学。2026 年 3 月 16&ndash;18 日。</i></font>
 <a href="https://github.com/hukaisdu/FSE-2026-SoSC-Cryptanalysis" class="btn--paper" target="_blank">materials</a>
