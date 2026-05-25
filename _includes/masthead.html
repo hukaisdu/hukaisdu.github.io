@@ -26,40 +26,13 @@
   {% assign lang_toggle_url = page.alt_url | default: '/zh/' %}
 {% endif %}
 
-<style>
-.lang-toggle {
-  position: absolute;
-  top: 0.7em;
-  right: 1em;
-  font-size: 0.85em;
-  color: #4a7a8c;
-  text-decoration: none;
-  padding: 3px 10px;
-  border: 1px solid #4a7a8c;
-  border-radius: 4px;
-  z-index: 100;
-  background: white;
-  font-weight: 600;
-}
-.lang-toggle:hover {
-  background: #4a7a8c;
-  color: white;
-  text-decoration: none;
-}
-@media (min-width: 64em) {
-  .greedy-nav .visible-links > .masthead__menu-item--lg {
-    min-width: 22%;
-  }
-}
-</style>
-
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         <button><div class="navicon"></div></button>
         <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ base_path }}{{ home_url }}" style="display: inline-flex; align-items: center; gap: 8px;"><img src="{{ base_path }}/images/sdu-logo.png" alt="SDU" style="height: 32px; width: auto; vertical-align: middle;">{{ site.title }}</a></li>
+          <li class="masthead__menu-item masthead__menu-item--lg"><a class="site-title-link" href="{{ base_path }}{{ home_url }}"><img class="site-title-logo" src="{{ base_path }}/images/sdu-logo.png" alt="SDU">{{ site.title }}</a></li>
           <li class="masthead__menu-item"><a href="{{ base_path }}{{ nav_pubs_url }}">{{ nav_pubs }}</a></li>
           <li class="masthead__menu-item"><a href="{{ base_path }}{{ nav_talks_url }}">{{ nav_talks }}</a></li>
           <li class="masthead__menu-item"><a href="{{ base_path }}{{ nav_teaching_url }}">{{ nav_teaching }}</a></li>
