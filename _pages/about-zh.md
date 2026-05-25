@@ -23,6 +23,11 @@ alt_url: /
 - 密码设计与分析的数学基础和自动化工具（division property、cube 攻击、差分/线性/积分密码分析、基于 MILP/SAT/SMT 的搜索）。
 - 密码分析与机器学习安全的交叉研究。
 
+## 学术服务
+
+- **程序委员会委员：** [IACR ToSC/FSE 2025/2026](https://www.iacr.org/transactions/tosc/)、[ASIACRYPT 2025](https://www.iacr.org/cryptodb/data/author.php?authorkey=10976)、[SAC 2025](https://sacworkshop.org/SAC25/about.html)、[Inscrypt 2025](https://inscrypt2025.xidian.edu.cn/)。
+- **技术程序委员会委员：** [ADSC 2024](https://adsc2024.github.io/)、[ADSC 2023](https://adsc2023.github.io/)。
+
 ## 新闻
 
 - 🎉 **[2026.05]** 两篇论文被 <strong style="color:#4a7a8c">CRYPTO 2026</strong> 录用：<em style="color:#2a5a7a">Cryptanalytic Properties of Mealy Machines</em> 和 <em style="color:#2a5a7a">Permutation-Based Hash from Non-Idealized Assumptions: Adding Feed-Forward to Sponge</em>。
