@@ -26,11 +26,6 @@ My research focuses on **symmetric-key cryptography**, in particular:
 - Mathematical foundations and automated tools for cipher design and cryptanalysis (division property, cube attacks, differential/linear/integral cryptanalysis, MILP/SAT/SMT-based search).
 - Connections between cryptanalysis and machine learning security.
 
-## Academic Service
-
-- **Program Committee:** [IACR ToSC/FSE 2025/2026](https://www.iacr.org/transactions/tosc/), [ASIACRYPT 2025](https://www.iacr.org/cryptodb/data/author.php?authorkey=10976), [SAC 2025](https://sacworkshop.org/SAC25/about.html), [Inscrypt 2025](https://inscrypt2025.xidian.edu.cn/).
-- **Technical Program Committee:** [ADSC 2024](https://adsc2024.github.io/), [ADSC 2023](https://adsc2023.github.io/).
-
 ## News
 
 - 🎉 **[2026.05]** Two papers accepted to <strong style="color:#4a7a8c">CRYPTO 2026</strong>: <em style="color:#2a5a7a">Cryptanalytic Properties of Mealy Machines</em> and <em style="color:#2a5a7a">Permutation-Based Hash from Non-Idealized Assumptions: Adding Feed-Forward to Sponge</em>.
