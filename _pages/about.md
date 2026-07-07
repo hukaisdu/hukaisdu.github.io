@@ -28,6 +28,7 @@ My research focuses on **symmetric-key cryptography**, in particular:
 
 ## News
 
+- 🎉 **[2026.06]** Two new preprints posted to <strong style="color:#4a7a8c">Cryptology ePrint Archive</strong>: <em style="color:#2a5a7a">Finer-Grained Fixed-Key Differential Probability Distributions via Quasidifferential Decoupling</em> and <em style="color:#2a5a7a">AICE: An Arithmetic-Oriented Stream Cipher for Heterogeneous Computing</em>.
 - 🎉 **[2026.05]** Two papers accepted to <strong style="color:#4a7a8c">CRYPTO 2026</strong>: <em style="color:#2a5a7a">Cryptanalytic Properties of Mealy Machines</em> and <em style="color:#2a5a7a">Permutation-Based Hash from Non-Idealized Assumptions: Adding Feed-Forward to Sponge</em>.
 - 🎉 **[2026.03]** Four papers accepted to <strong style="color:#4a7a8c">FSE 2026</strong>.
 - 🎉 **[2026.01]** Paper accepted to <strong style="color:#4a7a8c">EUROCRYPT 2026</strong>: <em style="color:#2a5a7a">Round-Based Approximation of (Higher-Order) Differential-Linear Correlation</em>.
