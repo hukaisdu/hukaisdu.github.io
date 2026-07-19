@@ -25,7 +25,6 @@ alt_url: /
 
 ## 新闻
 
-- 🎉 **[2026.06]** 两篇预印本发布在 <strong style="color:#4a7a8c">Cryptology ePrint Archive</strong>：<em style="color:#2a5a7a">Finer-Grained Fixed-Key Differential Probability Distributions via Quasidifferential Decoupling</em> 和 <em style="color:#2a5a7a">AICE: An Arithmetic-Oriented Stream Cipher for Heterogeneous Computing</em>。
 - 🎉 **[2026.05]** 两篇论文被 <strong style="color:#4a7a8c">CRYPTO 2026</strong> 录用：<em style="color:#2a5a7a">Cryptanalytic Properties of Mealy Machines</em> 和 <em style="color:#2a5a7a">Permutation-Based Hash from Non-Idealized Assumptions: Adding Feed-Forward to Sponge</em>。
 - 🎉 **[2026.03]** 四篇论文被 <strong style="color:#4a7a8c">FSE 2026</strong> 录用。
 - 🎉 **[2026.01]** 论文被 <strong style="color:#4a7a8c">EUROCRYPT 2026</strong> 录用：<em style="color:#2a5a7a">Round-Based Approximation of (Higher-Order) Differential-Linear Correlation</em>。
