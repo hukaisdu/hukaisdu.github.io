@@ -74,7 +74,7 @@ alt_url: /publications/
 
 ### <span class="pub-title">Finer-Grained Fixed-Key Differential Probability Distributions via Quasidifferential Decoupling</span>
 <font size="3"><b>Kai Hu</b>, Thomas Peyrin, Quan Quan Tan, Hongyi Zhang, Chunning Zhou.<br>
-<i>Cryptology ePrint Archive 2026/1162.</i></font>
+<i>IACR Trans. Symmetric Cryptol. (ToSC) 2026 (3) / FSE 2027.</i></font>
 <a href="{{ site.baseurl }}/files/papers/2026-1162-quasidifferential-decoupling.pdf" class="btn--paper" target="_blank" download>pdf</a>
 <a href="https://eprint.iacr.org/2026/1162" class="btn--eprint" target="_blank">eprint</a>
 
