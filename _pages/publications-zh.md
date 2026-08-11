@@ -63,7 +63,7 @@ alt_url: /publications/
 ### <span class="pub-title">An Exact Four-Wise Framework for Boomerang Cryptanalysis</span>
 <font size="3">Chengcheng Chang, <b>Kai Hu</b>, Shuo Peng, Haoyang Wang.<br>
 <i>Cryptology ePrint Archive 2026/1473.</i></font>
-<a href="https://eprint.iacr.org/2026/1473.pdf" class="btn--paper" target="_blank">pdf</a>
+<a href="{{ site.baseurl }}/files/papers/2026-1473-exact-four-wise-boomerang.pdf" class="btn--paper" target="_blank" download>pdf</a>
 <a href="https://eprint.iacr.org/2026/1473" class="btn--eprint" target="_blank">eprint</a>
 
 ### <span class="pub-title">Cryptanalytic Properties of Mealy Machines</span>
