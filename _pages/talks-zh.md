@@ -22,6 +22,11 @@ alt_url: /talks/
 }
 </style>
 
+### <span class="pub-title">Geometric Approach to Symmetric-Key Cryptanalysis</span>
+<font size="3"><i>受邀于 <strong>中国密码学会密码学高端系列培训之十四 &mdash; 对称密码设计与分析高端培训暨研讨会</strong> 授课。北京。2026 年 8 月 25 日。</i></font>
+<a href="{{ site.baseurl }}/files/Beijing2026-Geometric.pdf" class="btn--paper" target="_blank">slides</a>
+<a href="https://m.cacrnet.org.cn/site/content/1753.html" class="btn--paper" target="_blank">website</a>
+
 ### <span class="pub-title">Cryptanalytic Properties of Mealy Machines</span>
 <font size="3"><i>2026 年密码学沙龙 &mdash; 密码分析前沿论坛，中国长沙。2026 年 5 月 22&ndash;24 日。</i></font>
 <a href="{{ site.baseurl }}/files/Changsha2026-Mealy.pdf" class="btn--paper" target="_blank">slides</a>
