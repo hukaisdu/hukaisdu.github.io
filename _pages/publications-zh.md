@@ -54,7 +54,7 @@ alt_url: /publications/
 }
 </style>
 
-完整论文列表也可在 [DBLP](https://dblp.org/pid/180/3506.html) 和 [Google Scholar](https://scholar.google.com/citations?user=NzLi9xMAAAAJ) 查看。
+完整论文列表也可在 [DBLP]({{ site.author.dblp }}) 和 [Google Scholar]({{ site.author.googlescholar }}) 查看。
 
 <small>✉ 通讯作者。</small>
 

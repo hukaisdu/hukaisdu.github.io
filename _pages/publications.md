@@ -54,7 +54,7 @@ alt_url: /zh/publications/
 }
 </style>
 
-A full list is also available on [DBLP](https://dblp.org/pid/180/3506.html) and [Google Scholar](https://scholar.google.com/citations?user=NzLi9xMAAAAJ).
+A full list is also available on [DBLP]({{ site.author.dblp }}) and [Google Scholar]({{ site.author.googlescholar }}).
 
 <small>✉ Corresponding author.</small>
 
