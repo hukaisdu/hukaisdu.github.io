@@ -3,6 +3,7 @@ title: "论文"
 permalink: /zh/publications/
 author_profile: true
 lang: zh
+description: "胡凯、波环论文列表（按年份与会议归类）。"
 alt_url: /publications/
 ---
 
@@ -57,6 +58,8 @@ alt_url: /publications/
 完整论文列表也可在 [DBLP]({{ site.author.dblp }}) 和 [Google Scholar]({{ site.author.googlescholar }}) 查看。
 
 <small>✉ 通讯作者。</small>
+
+{% include publication-filters.html %}
 
 <h2 id="2026">2026</h2>
 

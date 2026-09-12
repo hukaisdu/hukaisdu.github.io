@@ -3,6 +3,7 @@ title: "Publications"
 permalink: /publications/
 author_profile: true
 lang: en
+description: "A searchable list of papers by year and venue for Kai Hu (Shandong University)."
 alt_url: /zh/publications/
 ---
 
@@ -57,6 +58,8 @@ alt_url: /zh/publications/
 A full list is also available on [DBLP]({{ site.author.dblp }}) and [Google Scholar]({{ site.author.googlescholar }}).
 
 <small>✉ Corresponding author.</small>
+
+{% include publication-filters.html %}
 
 <h2 id="2026">2026</h2>
 

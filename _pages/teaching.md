@@ -3,6 +3,7 @@ title: "Teaching"
 permalink: /teaching/
 author_profile: true
 lang: en
+description: "Teaching activities and course information at Shandong University."
 alt_url: /zh/teaching/
 ---
 

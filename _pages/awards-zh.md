@@ -3,6 +3,7 @@ title: "奖项"
 permalink: /zh/awards/
 author_profile: true
 lang: zh
+description: "胡凯近年的奖项与荣誉记录。"
 alt_url: /awards/
 ---
 

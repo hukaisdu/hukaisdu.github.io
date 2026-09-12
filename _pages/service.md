@@ -3,6 +3,7 @@ title: "Academic Service"
 permalink: /service/
 author_profile: true
 lang: en
+description: "Professional service records and committee memberships."
 alt_url: /zh/service/
 ---
 

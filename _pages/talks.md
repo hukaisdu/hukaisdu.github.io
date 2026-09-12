@@ -3,6 +3,7 @@ title: "Talks"
 permalink: /talks/
 author_profile: true
 lang: en
+description: "Talk records, seminars, and invited presentations by Kai Hu."
 alt_url: /zh/talks/
 ---
 

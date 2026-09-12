@@ -3,6 +3,7 @@ permalink: /
 title: ""
 author_profile: true
 lang: en
+description: "An academic homepage introducing research, background, and contact information."
 alt_url: /zh/
 redirect_from:
   - /about/

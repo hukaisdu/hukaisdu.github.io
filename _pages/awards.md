@@ -3,6 +3,7 @@ title: "Awards"
 permalink: /awards/
 author_profile: true
 lang: en
+description: "Honors and awards achieved by Kai Hu."
 alt_url: /zh/awards/
 ---
 

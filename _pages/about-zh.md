@@ -3,6 +3,7 @@ permalink: /zh/
 title: ""
 author_profile: true
 lang: zh
+description: "山东大学胡凯的中文主页简介与联系方式。"
 alt_url: /
 ---
 

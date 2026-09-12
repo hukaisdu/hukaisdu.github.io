@@ -3,6 +3,7 @@ title: "学术报告"
 permalink: /zh/talks/
 author_profile: true
 lang: zh
+description: "胡凯的学术报告、会议邀请报告与研讨活动。"
 alt_url: /talks/
 ---
 

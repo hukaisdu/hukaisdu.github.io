@@ -3,6 +3,7 @@ title: "教学"
 permalink: /zh/teaching/
 author_profile: true
 lang: zh
+description: "胡凯承担的课程与教学工作信息。"
 alt_url: /teaching/
 ---
 

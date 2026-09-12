@@ -1,0 +1,474 @@
+<style type="text/css">
+.pub-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 1rem 0;
+}
+
+.pub-filter-bar label {
+  font-size: 0.9em;
+  color: #4a7a8c;
+}
+
+.pub-filter-bar input,
+.pub-filter-bar select,
+.pub-filter-bar button {
+  border: 1px solid #d0d8de;
+  border-radius: 4px;
+  padding: 0.35rem 0.55rem;
+  font-size: 0.94em;
+}
+
+.pub-filter-bar input {
+  min-width: 240px;
+}
+
+.pub-tools {
+  display: inline-flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.pub-filter-bar button {
+  background: #4a7a8c;
+  color: white;
+  border-color: #4a7a8c;
+  cursor: pointer;
+}
+
+.pub-filter-bar button:hover,
+.pub-filter-bar button:focus {
+  opacity: 0.9;
+}
+
+.pub-result-count {
+  margin-top: 0.15rem;
+  color: #4a7a8c;
+  font-size: 0.92em;
+}
+
+.pub-venue-index {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0.35rem 0 0.85rem;
+}
+
+.pub-venue-index-label {
+  color: #4a7a8c;
+  font-size: 0.88em;
+  margin-right: 0.4rem;
+}
+
+.pub-venue-tag {
+  border: 1px solid #4a7a8c;
+  border-radius: 999px;
+  color: #2f5d79;
+  background: white;
+  padding: 0.22rem 0.62rem;
+  font-size: 0.84em;
+  cursor: pointer;
+}
+
+.pub-venue-tag.is-active {
+  color: #fff;
+  background: #4a7a8c;
+}
+
+@media (max-width: 760px) {
+  .pub-filter-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pub-filter-bar input,
+  .pub-filter-bar select,
+  .pub-filter-bar button {
+    width: 100%;
+  }
+
+  .pub-tools {
+    width: 100%;
+  }
+}
+</style>
+
+<div class="pub-filter-bar" id="pub-filter-bar" aria-label="Publication filters">
+  {% if page.lang == 'zh' %}
+    <label for="pub-search">🔍 关键词</label>
+    <input id="pub-search" type="search" placeholder="标题 / 关键词" aria-label="关键词搜索" />
+    <label for="pub-year">📅 年份</label>
+    <select id="pub-year">
+      <option value="">全部年份</option>
+    </select>
+    <label for="pub-venue">📄 会议 / 期刊</label>
+    <select id="pub-venue">
+      <option value="">全部 venue</option>
+    </select>
+    <div class="pub-tools">
+      <button id="pub-reset" type="button">重置</button>
+      <button id="pub-export-bibtex" type="button">导出 BibTeX</button>
+    </div>
+    <p id="pub-result-count" class="pub-result-count" role="status" aria-live="polite">正在载入论文数据…</p>
+  {% else %}
+    <label for="pub-search">🔍 Keywords</label>
+    <input id="pub-search" type="search" placeholder="title / keywords" aria-label="Search publications" />
+    <label for="pub-year">📅 Year</label>
+    <select id="pub-year">
+      <option value="">All years</option>
+    </select>
+    <label for="pub-venue">📄 Venue</label>
+    <select id="pub-venue">
+      <option value="">All venues</option>
+    </select>
+    <div class="pub-tools">
+      <button id="pub-reset" type="button">Reset</button>
+      <button id="pub-export-bibtex" type="button">Export BibTeX</button>
+    </div>
+    <p id="pub-result-count" class="pub-result-count" role="status" aria-live="polite">Loading publication list…</p>
+  {% endif %}
+</div>
+
+<div id="pub-venue-index" class="pub-venue-index" role="list" aria-label="Venue index"></div>
+
+<script>
+(function () {
+  function normalizeVenue(rawVenue) {
+    if (!rawVenue) {
+      return '';
+    }
+
+    var text = String(rawVenue);
+    var noSlash = text.split('/')[0];
+    var noYear = noSlash.replace(/\s*\d{4}.*$/, '');
+    var noParen = noYear.replace(/\([^\)]*\)/g, '');
+    return noParen.replace(/[\.,;:]\s*$/g, '').trim();
+  }
+
+  function escapeBib(value) {
+    return String(value || '')
+      .replace(/\\/g, '\\\\')
+      .replace(/[{}]/g, function (m) {
+        return '\\' + m;
+      });
+  }
+
+  function buildBibtexId(entry, index) {
+    var raw = (entry.title || 'paper') + (entry.year || '').toString();
+    var safe = raw.toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 32);
+    if (!safe) {
+      safe = 'paper' + String(index + 1);
+    }
+    return ('hu' + safe).replace(/_{2,}/g, '_');
+  }
+
+  function setupPublicationFilters() {
+    var isZh = {% if page.lang == 'zh' %}true{% else %}false{% endif %};
+    var searchInput = document.getElementById('pub-search');
+    var yearSelect = document.getElementById('pub-year');
+    var venueSelect = document.getElementById('pub-venue');
+    var resetButton = document.getElementById('pub-reset');
+    var exportButton = document.getElementById('pub-export-bibtex');
+    var countEl = document.getElementById('pub-result-count');
+    var venueIndexEl = document.getElementById('pub-venue-index');
+
+    if (!searchInput || !yearSelect || !venueSelect || !countEl || !venueIndexEl) {
+      return;
+    }
+
+    var yearHeadings = Array.prototype.slice.call(document.querySelectorAll('h2[id^="20"]'));
+
+    var entries = Array.prototype.slice.call(document.querySelectorAll('h3')).reduce(function (acc, h3) {
+      var titleEl = h3.querySelector('.pub-title');
+      if (!titleEl) {
+        return acc;
+      }
+
+      var year = '';
+      var prev = h3.previousElementSibling;
+      while (prev) {
+        if (prev.tagName === 'H2' && prev.id) {
+          year = prev.id;
+          break;
+        }
+        prev = prev.previousElementSibling;
+      }
+
+      var contentNodes = [h3];
+      var node = h3.nextElementSibling;
+      var venue = '';
+      var rawInfo = '';
+      var authors = '';
+      var links = {};
+
+      while (node && node.tagName !== 'H3' && node.tagName !== 'H2') {
+        contentNodes.push(node);
+
+        if (!rawInfo) {
+          if (node.tagName === 'FONT') {
+            rawInfo = node.textContent || '';
+          }
+        }
+
+        if (!venue && node.tagName === 'FONT') {
+          var venueNode = node.querySelector ? node.querySelector('i') : null;
+          if (venueNode && venueNode.textContent) {
+            venue = venueNode.textContent.trim();
+          }
+        }
+
+        if (node.tagName === 'A') {
+          var href = node.getAttribute('href') || '';
+          var text = (node.textContent || '').trim().toLowerCase();
+          if (!links.pdf && (text === 'pdf' || href.match(/\.pdf(\?|$)/i))) {
+            links.pdf = href;
+          }
+          if (!links.eprint && (href.indexOf('eprint.iacr.org') !== -1 || text === 'eprint')) {
+            links.eprint = href;
+          }
+          if (!links.main && href) {
+            links.main = href;
+          }
+        }
+
+        node = node.nextElementSibling;
+      }
+
+      if (!authors && rawInfo) {
+        authors = rawInfo.split('\n')[0] || rawInfo.split('\\n')[0] || '';
+      }
+
+      var cleanedVenue = venue || '';
+      var entry = {
+        heading: h3,
+        nodes: contentNodes,
+        year: year,
+        venue: cleanedVenue,
+        venueLabel: normalizeVenue(cleanedVenue),
+        title: titleEl.textContent.trim(),
+        authors: authors.trim(),
+        links: links,
+        visible: true,
+        rawInfo: rawInfo
+      };
+
+      acc.push(entry);
+      return acc;
+    }, []);
+
+    if (!entries.length) {
+      countEl.textContent = isZh ? '未找到可解析的论文条目。' : 'No publication entries found.';
+      return;
+    }
+
+    var years = {};
+    var venueStats = {};
+    var indexByVenue = {};
+
+    entries.forEach(function (entry, index) {
+      if (entry.year) {
+        years[entry.year] = true;
+      }
+
+      var venueKey = entry.venueLabel || 'Misc';
+      if (!indexByVenue[venueKey]) {
+        indexByVenue[venueKey] = [];
+      }
+      indexByVenue[venueKey].push(index);
+      venueStats[venueKey] = (venueStats[venueKey] || 0) + 1;
+    });
+
+    Object.keys(years).sort(function (a, b) {
+      return Number(b) - Number(a);
+    }).forEach(function (year) {
+      var opt = document.createElement('option');
+      opt.value = year;
+      opt.textContent = year;
+      yearSelect.appendChild(opt);
+    });
+
+    Object.keys(venueStats).sort().forEach(function (venue) {
+      var opt = document.createElement('option');
+      opt.value = venue;
+      opt.textContent = venue + ' (' + venueStats[venue] + ')';
+      venueSelect.appendChild(opt);
+    });
+
+    var venueButtons = {};
+
+    function renderVenueButtons(selectedVenue) {
+      venueIndexEl.innerHTML = '';
+      var title = isZh ? '按会议/期刊归类（点击筛选）：' : 'Group by venue (click to filter):';
+      var titleEl = document.createElement('span');
+      titleEl.className = 'pub-venue-index-label';
+      titleEl.textContent = title;
+      venueIndexEl.appendChild(titleEl);
+
+      Object.keys(venueStats).sort(function (a, b) {
+        if (venueStats[b] !== venueStats[a]) {
+          return venueStats[b] - venueStats[a];
+        }
+        return a.localeCompare(b);
+      }).forEach(function (venue) {
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'pub-venue-tag';
+        if (selectedVenue === venue) {
+          btn.className += ' is-active';
+        }
+        btn.textContent = venue + ' (' + venueStats[venue] + ')';
+        btn.setAttribute('role', 'listitem');
+        btn.addEventListener('click', function () {
+          if (venueSelect.value === venue) {
+            venueSelect.value = '';
+          } else {
+            venueSelect.value = venue;
+          }
+          onFilterChange();
+        });
+
+        venueButtons[venue] = btn;
+        venueIndexEl.appendChild(btn);
+      });
+    }
+
+    function onFilterChange() {
+      var query = searchInput.value.trim().toLowerCase();
+      var year = yearSelect.value;
+      var venue = venueSelect.value;
+      var visibleYears = {};
+      var visibleCount = 0;
+
+      entries.forEach(function (entry) {
+        var visible = true;
+
+        if (year && entry.year !== year) {
+          visible = false;
+        }
+
+        if (venue && entry.venueLabel !== venue) {
+          visible = false;
+        }
+
+        if (query) {
+          var text = (entry.title + ' ' + (entry.authors || '') + ' ' + (entry.venue || entry.rawInfo)).toLowerCase();
+          if (text.indexOf(query) === -1) {
+            visible = false;
+          }
+        }
+
+        entry.visible = visible;
+        entry.nodes.forEach(function (n) {
+          n.style.display = visible ? '' : 'none';
+        });
+
+        if (visible) {
+          visibleCount += 1;
+          if (entry.year) {
+            visibleYears[entry.year] = true;
+          }
+        }
+      });
+
+      yearHeadings.forEach(function (h2) {
+        var id = h2.id || '';
+        if (!year || year === id) {
+          h2.style.display = visibleYears[id] ? '' : 'none';
+        } else {
+          h2.style.display = 'none';
+        }
+      });
+
+      Object.keys(venueButtons).forEach(function (key) {
+        if (venueButtons[key]) {
+          venueButtons[key].classList.toggle('is-active', key === venue);
+        }
+      });
+
+      if (visibleCount === 0) {
+        countEl.textContent = isZh ?
+          '未匹配到论文。请尝试其他关键词。' :
+          'No matching publications. Try another keyword.';
+        return;
+      }
+
+      countEl.textContent = isZh ?
+        ('已显示 ' + visibleCount + ' 篇，共 ' + entries.length + ' 篇。') :
+        ('Showing ' + visibleCount + ' of ' + entries.length + ' publications.');
+    }
+
+    function exportBibtex() {
+      var visibleEntries = entries.filter(function (entry) {
+        return entry.visible;
+      });
+
+      if (!visibleEntries.length) {
+        countEl.textContent = isZh ? '当前筛选下没有可导出的论文。' : 'No visible publications to export.';
+        return;
+      }
+
+      var lines = [
+        '@comment{ Generated from https://hukaisdu.github.io/publications/ }',
+        ''
+      ];
+
+      visibleEntries.forEach(function (entry, index) {
+        var link = entry.links.eprint || entry.links.pdf || entry.links.main || '';
+        var bib = [
+          '@misc{' + buildBibtexId(entry, index) + ',',
+          '  author    = {' + escapeBib(entry.authors) + '},',
+          '  title     = {' + escapeBib(entry.title) + '},',
+          '  year      = {' + escapeBib(entry.year) + '},',
+          '  howpublished = {' + escapeBib(link) + '},',
+          '  note      = {' + escapeBib(entry.venue || entry.rawInfo || '') + '}',
+          '}',
+          ''
+        ];
+
+        if (link) {
+          bib[4] = '  howpublished = {\url{' + escapeBib(link) + '}},';
+        }
+
+        lines.push.apply(lines, bib);
+      });
+
+      var blob = new Blob([lines.join('\n')], { type: 'text/plain;charset=utf-8' });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = 'publications-filtered.bib';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+
+      countEl.textContent = isZh ?
+        ('已导出 ' + visibleEntries.length + ' 篇。') :
+        ('Exported ' + visibleEntries.length + ' records.');
+    }
+
+    exportButton.addEventListener('click', exportBibtex);
+    searchInput.addEventListener('input', onFilterChange);
+    yearSelect.addEventListener('change', onFilterChange);
+    venueSelect.addEventListener('change', onFilterChange);
+    resetButton.addEventListener('click', function () {
+      searchInput.value = '';
+      yearSelect.value = '';
+      venueSelect.value = '';
+      onFilterChange();
+    });
+
+    renderVenueButtons('');
+    onFilterChange();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupPublicationFilters);
+  } else {
+    setupPublicationFilters();
+  }
+})();
+</script>

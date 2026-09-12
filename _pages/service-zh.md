@@ -3,6 +3,7 @@ title: "学术服务"
 permalink: /zh/service/
 author_profile: true
 lang: zh
+description: "胡凯的学术服务与评审、委员会任职信息。"
 alt_url: /service/
 ---
 
