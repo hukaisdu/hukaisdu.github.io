@@ -38,6 +38,6 @@ alt_url: /zh/talks/
 <a href="https://informatik.rub.de/symcrypt/springschool2026/" class="btn--paper" target="_blank">website</a>
 
 ### <span class="pub-title">Round-Based Approximation of (Higher-Order) Differential-Linear Correlation &mdash; A Geometric Approach Perspective</span>
-<font size="3"><i>Gelrecrypt 2026, Nijmegen, The Netherlands. November 4&ndash;7, 2025.</i></font>
+<font size="3"><i>GelreCrypt 2025, Nijmegen, The Netherlands. November 4&ndash;7, 2025.</i></font>
 <a href="{{ site.baseurl }}/files/Gelrecrypt2025-DL.pdf" class="btn--paper" target="_blank">slides</a>
 <a href="https://gelrecrypt.cs.ru.nl/index#program" class="btn--paper" target="_blank">website</a>

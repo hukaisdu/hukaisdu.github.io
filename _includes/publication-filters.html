@@ -87,6 +87,7 @@
   .pub-filter-bar input,
   .pub-filter-bar select,
   .pub-filter-bar button {
+    min-width: 0;
     width: 100%;
   }
 
@@ -96,7 +97,7 @@
 }
 </style>
 
-<div class="pub-filter-bar" id="pub-filter-bar" aria-label="Publication filters">
+<div class="pub-filter-bar" id="pub-filter-bar" aria-label="{% if page.lang == 'zh' %}论文筛选{% else %}Publication filters{% endif %}">
   {% if page.lang == 'zh' %}
     <label for="pub-search">🔍 关键词</label>
     <input id="pub-search" type="search" placeholder="标题 / 关键词" aria-label="关键词搜索" />
@@ -106,7 +107,7 @@
     </select>
     <label for="pub-venue">📄 会议 / 期刊</label>
     <select id="pub-venue">
-      <option value="">全部 venue</option>
+      <option value="">全部会议 / 期刊</option>
     </select>
     <div class="pub-tools">
       <button id="pub-reset" type="button">重置</button>
@@ -132,7 +133,7 @@
   {% endif %}
 </div>
 
-<div id="pub-venue-index" class="pub-venue-index" role="list" aria-label="Venue index"></div>
+<div id="pub-venue-index" class="pub-venue-index" role="group" aria-label="{% if page.lang == 'zh' %}会议与期刊索引{% else %}Venue index{% endif %}"></div>
 
 <script>
 (function () {
@@ -149,11 +150,16 @@
   }
 
   function escapeBib(value) {
-    return String(value || '')
-      .replace(/\\/g, '\\\\')
-      .replace(/[{}]/g, function (m) {
-        return '\\' + m;
+    /* Keep existing inline TeX (for example $\mathbb{F}_{p}$) intact. */
+    return String(value || '').split(/(\$[^$]*\$)/g).map(function (part) {
+      if (part.charAt(0) === '$' && part.charAt(part.length - 1) === '$') {
+        return part;
+      }
+      var replacements = { '\\': '\\textbackslash{}', '~': '\\textasciitilde{}', '^': '\\textasciicircum{}' };
+      return part.replace(/[\\{}%&#_$~^]/g, function (character) {
+        return replacements[character] || '\\' + character;
       });
+    }).join('');
   }
 
   function buildBibtexId(entry, index) {
@@ -162,7 +168,7 @@
     if (!safe) {
       safe = 'paper' + String(index + 1);
     }
-    return ('hu' + safe).replace(/_{2,}/g, '_');
+    return 'hu' + entry.year + '-' + safe + '-' + String(index + 1);
   }
 
   function setupPublicationFilters() {
@@ -175,7 +181,7 @@
     var countEl = document.getElementById('pub-result-count');
     var venueIndexEl = document.getElementById('pub-venue-index');
 
-    if (!searchInput || !yearSelect || !venueSelect || !countEl || !venueIndexEl) {
+    if (!searchInput || !yearSelect || !venueSelect || !resetButton || !exportButton || !countEl || !venueIndexEl) {
       return;
     }
 
@@ -207,22 +213,36 @@
       while (node && node.tagName !== 'H3' && node.tagName !== 'H2') {
         contentNodes.push(node);
 
-        if (!rawInfo) {
-          if (node.tagName === 'FONT') {
-            rawInfo = node.textContent || '';
+        var infoNode = node.tagName === 'FONT' ? node : node.querySelector('font');
+        if (!rawInfo && infoNode) {
+          rawInfo = infoNode.textContent || '';
+          /* HTML compression removes newlines; <br> separates authors from venue. */
+          var authorCopy = infoNode.cloneNode(true);
+          Array.prototype.forEach.call(authorCopy.querySelectorAll('sup, i'), function (element) {
+            element.parentNode.removeChild(element);
+          });
+          for (var child = authorCopy.firstChild; child && child.nodeName !== 'BR'; child = child.nextSibling) {
+            authors += child.textContent;
           }
+          authors = authors.replace(/\s+/g, ' ').trim().replace(/\.$/, '');
         }
 
-        if (!venue && node.tagName === 'FONT') {
-          var venueNode = node.querySelector ? node.querySelector('i') : null;
+        if (!venue && infoNode) {
+          var venueNode = infoNode.querySelector('i');
           if (venueNode && venueNode.textContent) {
             venue = venueNode.textContent.trim();
           }
         }
 
-        if (node.tagName === 'A') {
-          var href = node.getAttribute('href') || '';
-          var text = (node.textContent || '').trim().toLowerCase();
+        /* Kramdown wraps download links in <p> elements. */
+        var anchors = node.tagName === 'A' ? [node] : node.querySelectorAll('a');
+        Array.prototype.forEach.call(anchors, function (anchor) {
+          var rawHref = anchor.getAttribute('href') || '';
+          if (!rawHref || rawHref.charAt(0) === '#') {
+            return;
+          }
+          var href = new URL(rawHref, document.baseURI).href;
+          var text = (anchor.textContent || '').trim().toLowerCase();
           if (!links.pdf && (text === 'pdf' || href.match(/\.pdf(\?|$)/i))) {
             links.pdf = href;
           }
@@ -232,13 +252,9 @@
           if (!links.main && href) {
             links.main = href;
           }
-        }
+        });
 
         node = node.nextElementSibling;
-      }
-
-      if (!authors && rawInfo) {
-        authors = rawInfo.split('\n')[0] || rawInfo.split('\\n')[0] || '';
       }
 
       var cleanedVenue = venue || '';
@@ -247,7 +263,7 @@
         nodes: contentNodes,
         year: year,
         venue: cleanedVenue,
-        venueLabel: normalizeVenue(cleanedVenue),
+        venueLabel: normalizeVenue(cleanedVenue) || 'Misc',
         title: titleEl.textContent.trim(),
         authors: authors.trim(),
         links: links,
@@ -255,6 +271,7 @@
         rawInfo: rawInfo
       };
 
+      entry.bibtexId = buildBibtexId(entry, acc.length);
       acc.push(entry);
       return acc;
     }, []);
@@ -320,7 +337,7 @@
           btn.className += ' is-active';
         }
         btn.textContent = venue + ' (' + venueStats[venue] + ')';
-        btn.setAttribute('role', 'listitem');
+        btn.setAttribute('aria-pressed', selectedVenue === venue ? 'true' : 'false');
         btn.addEventListener('click', function () {
           if (venueSelect.value === venue) {
             venueSelect.value = '';
@@ -385,6 +402,7 @@
       Object.keys(venueButtons).forEach(function (key) {
         if (venueButtons[key]) {
           venueButtons[key].classList.toggle('is-active', key === venue);
+          venueButtons[key].setAttribute('aria-pressed', key === venue ? 'true' : 'false');
         }
       });
 
@@ -411,26 +429,25 @@
       }
 
       var lines = [
-        '@comment{ Generated from https://hukaisdu.github.io/publications/ }',
+        '@comment{ Generated from {{ site.url }}{{ site.baseurl }}{{ page.url }} }',
         ''
       ];
 
-      visibleEntries.forEach(function (entry, index) {
+      visibleEntries.forEach(function (entry) {
         var link = entry.links.eprint || entry.links.pdf || entry.links.main || '';
         var bib = [
-          '@misc{' + buildBibtexId(entry, index) + ',',
-          '  author    = {' + escapeBib(entry.authors) + '},',
-          '  title     = {' + escapeBib(entry.title) + '},',
+          '@misc{' + entry.bibtexId + ',',
+          '  author    = {' + escapeBib(entry.authors.split(/\s*,\s*/).join(' and ')) + '},',
+          '  title     = {' + '{' + escapeBib(entry.title) + '}' + '},',
           '  year      = {' + escapeBib(entry.year) + '},',
-          '  howpublished = {' + escapeBib(link) + '},',
-          '  note      = {' + escapeBib(entry.venue || entry.rawInfo || '') + '}',
-          '}',
-          ''
+          '  note      = {' + escapeBib(entry.venue || entry.rawInfo || '') + '}' + (link ? ',' : '')
         ];
 
         if (link) {
-          bib[4] = '  howpublished = {\url{' + escapeBib(link) + '}},';
+          bib.push('  url       = {' + link + '},');
+          bib.push('  howpublished = {\\url{' + link + '}}');
         }
+        bib.push('}', '');
 
         lines.push.apply(lines, bib);
       });
@@ -443,7 +460,7 @@
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
-      URL.revokeObjectURL(url);
+      setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
 
       countEl.textContent = isZh ?
         ('已导出 ' + visibleEntries.length + ' 篇。') :

@@ -1,0 +1,13 @@
+# Local output, dependencies, and editor state.
+_site/
+.bundle/
+.jekyll-cache/
+.sass-cache/
+.claude/
+node_modules/
+vendor/
+.DS_Store
+
+# Keep local notes and Syncthing conflict copies out of commits.
+*-log.md
+*.sync-conflict-*

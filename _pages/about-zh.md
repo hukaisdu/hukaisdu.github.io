@@ -26,6 +26,7 @@ alt_url: /
 
 ## 新闻
 
+- 🎉 **[2026.09]** 论文被 <strong style="color:#4a7a8c">ASIACRYPT 2026</strong> 录用：<em style="color:#2a5a7a">Revisiting Differential-Linear Cryptanalysis via a Walsh-Transform Perspective</em>。[[论文](https://eprint.iacr.org/2026/2013.pdf)]
 - 🎉 **[2026.05]** 两篇论文被 <strong style="color:#4a7a8c">CRYPTO 2026</strong> 录用：<em style="color:#2a5a7a">Cryptanalytic Properties of Mealy Machines</em> 和 <em style="color:#2a5a7a">Permutation-Based Hash from Non-Idealized Assumptions: Adding Feed-Forward to Sponge</em>。
 - 🎉 **[2026.03]** 四篇论文被 <strong style="color:#4a7a8c">FSE 2026</strong> 录用。
 - 🎉 **[2026.01]** 论文被 <strong style="color:#4a7a8c">EUROCRYPT 2026</strong> 录用：<em style="color:#2a5a7a">Round-Based Approximation of (Higher-Order) Differential-Linear Correlation</em>。

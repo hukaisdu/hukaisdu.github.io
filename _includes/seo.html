@@ -6,7 +6,8 @@
 {% endif %}
 {% assign seo_url = seo_url | default: site.github.url %}
 
-{% if page.title %}
+{% assign page_title = page.title | default: "" | strip %}
+{% if page_title != "" %}
   {% assign seo_title = page.title | append: " " | append: site.title_separator | append: " " | append: site.title %}
 {% endif %}
 
@@ -39,16 +40,21 @@
   {% assign seo_author_twitter = seo_author_twitter | replace: "@", "" %}
 {% endif %}
 
-<meta property="og:locale" content="{{ site.locale | default: "en" }}">
+<meta property="og:locale" content="{% if page.lang == 'zh' %}zh_CN{% else %}{{ site.locale | default: 'en_US' | replace: '-', '_' }}{% endif %}">
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:title" content="{{ page.title | default: site.title | markdownify | strip_html | strip_newlines | escape_once }}">
 
 {% if seo_url %}
   <link rel="canonical" href="{{ page.url | prepend: seo_url | replace: "/index.html", "/" }}">
   <meta property="og:url" content="{{ page.url | prepend: seo_url | replace: "/index.html", "/" }}">
+  {% if page.alt_url %}
+    <link rel="alternate" hreflang="{{ page.lang }}" href="{{ page.url | prepend: seo_url }}">
+    <link rel="alternate" hreflang="{% if page.lang == 'zh' %}en{% else %}zh{% endif %}" href="{{ page.alt_url | prepend: seo_url }}">
+  {% endif %}
 {% endif %}
 
-{% if page.excerpt %}
+{% if seo_description %}
+  <meta name="description" content="{{ seo_description }}">
   <meta property="og:description" content="{{ seo_description }}">
 {% endif %}
 

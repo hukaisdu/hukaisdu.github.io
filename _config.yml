@@ -125,6 +125,10 @@ include:
   - _pages
   - files
 exclude:
+  - "*.sync-conflict-*"
+  - "**/*.sync-conflict-*"
+  - "*-log.md"
+  - tests
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache

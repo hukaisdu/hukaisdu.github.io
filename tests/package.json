@@ -1,0 +1,10 @@
+{
+  "name": "personal-site-checks",
+  "private": true,
+  "scripts": {
+    "test": "node --test site.test.cjs"
+  },
+  "devDependencies": {
+    "jsdom": "26.1.0"
+  }
+}

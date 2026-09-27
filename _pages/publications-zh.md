@@ -63,6 +63,12 @@ alt_url: /publications/
 
 <h2 id="2026">2026</h2>
 
+### <span class="pub-title">Revisiting Differential-Linear Cryptanalysis via a Walsh-Transform Perspective</span>
+<font size="3">Jiahui He, <b>Kai Hu</b>, Zhongfeng Niu, Bart Preneel, Meiqin Wang.<br>
+<i>ASIACRYPT 2026.</i></font>
+<a href="{{ site.baseurl }}/files/papers/2026-2013-walsh-transform-differential-linear.pdf" class="btn--paper" target="_blank" download>pdf</a>
+<a href="https://eprint.iacr.org/2026/2013" class="btn--eprint" target="_blank">eprint</a>
+
 ### <span class="pub-title">An Exact Four-Wise Framework for Boomerang Cryptanalysis</span>
 <font size="3">Chengcheng Chang, <b>Kai Hu</b>, Shuo Peng, Haoyang Wang.<br>
 <i>Cryptology ePrint Archive 2026/1473.</i></font>
@@ -177,31 +183,26 @@ alt_url: /publications/
 <font size="3">Chenhao Jia, Tingting Cui, Qing Ling, Yan He, <b>Kai Hu</b>, Yu Sun, Meiqin Wang.<br>
 <i>IACR Trans. Symmetric Cryptol. (ToSC) 2025 / FSE 2025.</i></font>
 <a href="{{ site.baseurl }}/files/papers/2025-how-small-sboxes.pdf" class="btn--paper" target="_blank" download>pdf</a>
-<a href="#" class="btn--eprint" target="_blank">eprint</a>
 
 ### <span class="pub-title">Symmetric Twin Column Parity Mixers and their Applications</span>
 <font size="3">Hao Lei, Raghvendra Rohit, Guoxiao Liu, Jiahui He, Mohamed Rachidi, Keting Jia, <b>Kai Hu</b><sup class="corresp">✉</sup>, Meiqin Wang.<br>
 <i>IACR Trans. Symmetric Cryptol. (ToSC) 2024 (4) / FSE 2025.</i></font>
 <a href="{{ site.baseurl }}/files/papers/2024-twin-column-parity-mixers.pdf" class="btn--paper" target="_blank" download>pdf</a>
-<a href="#" class="btn--eprint" target="_blank">eprint</a>
 
 ### <span class="pub-title">Perfect Monomial Prediction for Modular Addition</span>
 <font size="3"><b>Kai Hu</b><sup class="corresp">✉</sup>, Trevor Yap.<br>
 <i>IACR Trans. Symmetric Cryptol. (ToSC) 2024 (4) / FSE 2025.</i></font>
 <a href="{{ site.baseurl }}/files/papers/2024-perfect-monomial-prediction.pdf" class="btn--paper" target="_blank" download>pdf</a>
-<a href="#" class="btn--eprint" target="_blank">eprint</a>
 
 ### <span class="pub-title">Improved Conditional Cube Attacks on Ascon AEADs in Nonce-Respecting Settings with a Break-Fix Strategy</span>
 <font size="3"><b>Kai Hu</b>.<br>
 <i>IACR Trans. Symmetric Cryptol. (ToSC) 2024 / FSE 2025.</i></font>
 <a href="{{ site.baseurl }}/files/papers/2024-ascon-break-fix.pdf" class="btn--paper" target="_blank" download>pdf</a>
-<a href="#" class="btn--eprint" target="_blank">eprint</a>
 
 ### <span class="pub-title">Cryptanalysis of Full-Round BipBip</span>
 <font size="3">Jinliang Wang, Christina Boura, Patrick Derbez, <b>Kai Hu</b>, Muzhou Li, Meiqin Wang.<br>
 <i>IACR Trans. Symmetric Cryptol. (ToSC) 2024 / FSE 2025.</i></font>
 <a href="{{ site.baseurl }}/files/papers/2024-full-round-bipbip.pdf" class="btn--paper" target="_blank" download>pdf</a>
-<a href="#" class="btn--eprint" target="_blank">eprint</a>
 
 ### <span class="pub-title">Towards Better Integral Distinguishers over $\mathbb{F}_{p}$ Based on Exact Coefficients of Monomials</span>
 <font size="3">Muzhou Li, Jiamin Cui, Longzheng Cui, <b>Kai Hu</b>, Chao Niu, Meiqin Wang.<br>
@@ -221,13 +222,11 @@ alt_url: /publications/
 <font size="3">Zhongfeng Niu, <b>Kai Hu</b>, Siwei Sun, Zhiyu Zhang, Meiqin Wang.<br>
 <i>CRYPTO 2024.</i></font>
 <a href="{{ site.baseurl }}/files/papers/2024-speeding-up-preimage-key-recovery.pdf" class="btn--paper" target="_blank" download>pdf</a>
-<a href="#" class="btn--eprint" target="_blank">eprint</a>
 
 ### <span class="pub-title">Massive Superpoly Recovery with a Meet-in-the-Middle Framework &mdash; Improved Cube Attacks on Trivium and Kreyvium</span>
 <font size="3">Jiahui He, <b>Kai Hu</b>, Hao Lei, Meiqin Wang.<br>
 <i>EUROCRYPT 2024.</i></font>
 <a href="{{ site.baseurl }}/files/papers/2024-mitm-superpoly-trivium-kreyvium.pdf" class="btn--paper" target="_blank" download>pdf</a>
-<a href="#" class="btn--eprint" target="_blank">eprint</a>
 
 ### <span class="pub-title">Integral Attack on the Full FUTURE Block Cipher</span>
 <font size="3">Zeyu Xu, Jiamin Cui, <b>Kai Hu</b><sup class="corresp">✉</sup>, Meiqin Wang.<br>
@@ -247,13 +246,11 @@ alt_url: /publications/
 <font size="3">Hao Lei, Jiahui He, <b>Kai Hu</b>, Meiqin Wang.<br>
 <i>SAC 2023.</i></font>
 <a href="{{ site.baseurl }}/files/papers/2023-balanced-polynomials-trivium.pdf" class="btn--paper" target="_blank" download>pdf</a>
-<a href="#" class="btn--eprint" target="_blank">eprint</a>
 
 ### <span class="pub-title">Revisiting Higher-Order Differential-Linear Attacks from an Algebraic Perspective</span>
 <font size="3"><b>Kai Hu</b><sup class="corresp">✉</sup>, Thomas Peyrin, Quan Quan Tan, Trevor Yap.<br>
 <i>ASIACRYPT 2023.</i></font>
 <a href="{{ site.baseurl }}/files/papers/2022-1335-higher-order-differential-linear.pdf" class="btn--paper" target="_blank" download>pdf</a>
-<a href="#" class="btn--eprint" target="_blank">eprint</a>
 
 <h2 id="2022">2022</h2>
 
@@ -261,25 +258,21 @@ alt_url: /publications/
 <font size="3"><b>Kai Hu</b>, Thomas Peyrin, Meiqin Wang.<br>
 <i>SAC 2022.</i></font>
 <a href="{{ site.baseurl }}/files/papers/2022-finding-impossible-differentials-ddt.pdf" class="btn--paper" target="_blank" download>pdf</a>
-<a href="#" class="btn--eprint" target="_blank">eprint</a>
 
 ### <span class="pub-title">Stretching Cube Attacks: Improved Methods to Recover Massive Superpolies</span>
 <font size="3">Jiahui He, <b>Kai Hu</b>, Bart Preneel, Meiqin Wang.<br>
 <i>ASIACRYPT 2022.</i></font>
 <a href="{{ site.baseurl }}/files/papers/2022-stretching-cube-attacks.pdf" class="btn--paper" target="_blank" download>pdf</a>
-<a href="#" class="btn--eprint" target="_blank">eprint</a>
 
 ### <span class="pub-title">On the Field-Based Division Property: Applications to MiMC, Feistel MiMC and GMiMC</span>
 <font size="3">Jiamin Cui, <b>Kai Hu</b>, Meiqin Wang, Puwen Wei.<br>
 <i>ASIACRYPT 2022.</i></font>
 <a href="{{ site.baseurl }}/files/papers/2022-field-based-division-property.pdf" class="btn--paper" target="_blank" download>pdf</a>
-<a href="#" class="btn--eprint" target="_blank">eprint</a>
 
 ### <span class="pub-title">Integral Attacks on Pyjamask-96 and Round-Reduced Pyjamask-128</span>
 <font size="3">Jiamin Cui, <b>Kai Hu</b>, Qingju Wang, Meiqin Wang.<br>
 <i>CT-RSA 2022.</i></font>
 <a href="{{ site.baseurl }}/files/papers/2022-pyjamask-integral-attacks.pdf" class="btn--paper" target="_blank" download>pdf</a>
-<a href="#" class="btn--eprint" target="_blank">eprint</a>
 
 <h2 id="2021">2021</h2>
 
@@ -287,19 +280,16 @@ alt_url: /publications/
 <font size="3"><b>Kai Hu</b>, Siwei Sun, Yosuke Todo, Meiqin Wang, Qingju Wang.<br>
 <i>ASIACRYPT 2021.</i></font>
 <a href="{{ site.baseurl }}/files/papers/2021-nested-monomial-predictions.pdf" class="btn--paper" target="_blank" download>pdf</a>
-<a href="#" class="btn--eprint" target="_blank">eprint</a>
 
 ### <span class="pub-title">Misuse-Free Key-Recovery and Distinguishing Attacks on 7-Round Ascon</span>
 <font size="3">Raghvendra Rohit, <b>Kai Hu</b>, Sumanta Sarkar, Siwei Sun.<br>
 <i>IACR Trans. Symmetric Cryptol. (ToSC) 2021 / FSE 2022.</i></font>
 <a href="{{ site.baseurl }}/files/papers/2021-ascon-misuse-free.pdf" class="btn--paper" target="_blank" download>pdf</a>
-<a href="#" class="btn--eprint" target="_blank">eprint</a>
 
 ### <span class="pub-title">Pushing the Limits: Searching for Implementations with the Smallest Area for Lightweight S-Boxes</span>
 <font size="3">Zhenyu Lu, Weijia Wang, <b>Kai Hu</b>, Yanhong Fan, Lixuan Wu, Meiqin Wang.<br>
 <i>INDOCRYPT 2021.</i></font>
 <a href="{{ site.baseurl }}/files/papers/2021-smallest-area-lightweight-sboxes.pdf" class="btn--paper" target="_blank" download>pdf</a>
-<a href="#" class="btn--eprint" target="_blank">eprint</a>
 
 ### <span class="pub-title">A Secure IoT Firmware Update Scheme Against SCPA and DoS Attacks</span>
 <font size="3">Yan-Hong Fan, Mei-Qin Wang, Yan-Bin Li, <b>Kai Hu</b>, Muzhou Li.<br>
@@ -317,19 +307,16 @@ alt_url: /publications/
 <font size="3"><b>Kai Hu</b>, Siwei Sun, Meiqin Wang, Qingju Wang.<br>
 <i>ASIACRYPT 2020.</i></font>
 <a href="{{ site.baseurl }}/files/papers/2020-algebraic-division-property.pdf" class="btn--paper" target="_blank" download>pdf</a>
-<a href="#" class="btn--eprint" target="_blank">eprint</a>
 
 ### <span class="pub-title">MixColumns Coefficient Property and Security of the AES with a Secret S-Box</span>
 <font size="3">Xin An, <b>Kai Hu</b>, Meiqin Wang.<br>
 <i>AFRICACRYPT 2020.</i></font>
 <a href="{{ site.baseurl }}/files/papers/2020-mixcolumns-secret-sbox.pdf" class="btn--paper" target="_blank" download>pdf</a>
-<a href="#" class="btn--eprint" target="_blank">eprint</a>
 
 ### <span class="pub-title">Finding Bit-Based Division Property for Ciphers with Complex Linear Layers</span>
 <font size="3"><b>Kai Hu</b>, Qingju Wang, Meiqin Wang.<br>
 <i>IACR Trans. Symmetric Cryptol. (ToSC) 2020 / FSE 2021.</i></font>
 <a href="{{ site.baseurl }}/files/papers/2020-bit-based-division-property-complex-linear-layers.pdf" class="btn--paper" target="_blank" download>pdf</a>
-<a href="#" class="btn--eprint" target="_blank">eprint</a>
 
 <h2 id="2019">2019</h2>
 
@@ -337,13 +324,11 @@ alt_url: /publications/
 <font size="3"><b>Kai Hu</b>, Meiqin Wang.<br>
 <i>CT-RSA 2019.</i></font>
 <a href="{{ site.baseurl }}/files/papers/2019-variant-division-property-three-subsets.pdf" class="btn--paper" target="_blank" download>pdf</a>
-<a href="#" class="btn--eprint" target="_blank">eprint</a>
 
 ### <span class="pub-title">Related-Tweak Statistical Saturation Cryptanalysis and Its Application on QARMA</span>
 <font size="3">Muzhou Li, <b>Kai Hu</b>, Meiqin Wang.<br>
 <i>IACR Trans. Symmetric Cryptol. (ToSC) 2019 / FSE 2020.</i></font>
 <a href="{{ site.baseurl }}/files/papers/2019-qarma-related-tweak-statistical-saturation.pdf" class="btn--paper" target="_blank" download>pdf</a>
-<a href="#" class="btn--eprint" target="_blank">eprint</a>
 
 <h2 id="2018">2018</h2>
 
@@ -351,4 +336,3 @@ alt_url: /publications/
 <font size="3"><b>Kai Hu</b>, Tingting Cui, Chao Gao, Meiqin Wang.<br>
 <i>SAC 2018.</i></font>
 <a href="{{ site.baseurl }}/files/papers/2018-key-dependent-aes.pdf" class="btn--paper" target="_blank" download>pdf</a>
-<a href="#" class="btn--eprint" target="_blank">eprint</a>
