@@ -14,6 +14,10 @@ alt_url: /zh/awards/
 }
 </style>
 
+### <span class="award-title">ACM SIGSAC China Rising Star Award</span>
+<font size="3">ACM SIGSAC China, 2026.<br>
+<i>Annual award, up to 3 recipients per year.</i></font>
+
 ### <span class="award-title">CACR Outstanding Youth Award</span>
 <font size="3">Chinese Association for Cryptologic Research, 2025.<br>
 <i>Biennial award, up to 4 recipients per cycle. One of the highest honors for early-career cryptographers in China.</i></font>

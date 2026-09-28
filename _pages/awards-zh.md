@@ -14,6 +14,10 @@ alt_url: /awards/
 }
 </style>
 
+### <span class="award-title">ACM SIGSAC 中国新星奖</span>
+<font size="3">ACM SIGSAC 中国，2026 年。<br>
+<i>每年评选一次，每次获奖者不超过 3 人。</i></font>
+
 ### <span class="award-title">中国密码学会优秀青年奖</span>
 <font size="3">中国密码学会，2025 年。<br>
 <i>每两年评选一次，每次获奖者不超过 4 人，是国内密码学领域面向青年科研人员的最高荣誉之一。</i></font>
