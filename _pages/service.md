@@ -9,6 +9,7 @@ alt_url: /zh/service/
 
 ## Program Committees
 
+- [EUROCRYPT 2027](https://eurocrypt.iacr.org/2027/)
 - [IACR ToSC/FSE 2025/2026](https://www.iacr.org/transactions/tosc/)
 - [ASIACRYPT 2025](https://www.iacr.org/cryptodb/data/author.php?authorkey=10976)
 - [Selected Areas in Cryptography (SAC) 2025](https://sacworkshop.org/SAC25/about.html)
